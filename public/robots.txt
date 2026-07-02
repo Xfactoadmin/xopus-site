@@ -1,0 +1,17 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+# Host
+Host: https://xopus.fr
+
+# Sitemaps
+Sitemap: https://xopus.fr/sitemap.xml
+Sitemap: https://xopus.fr/sitemap-0.xml

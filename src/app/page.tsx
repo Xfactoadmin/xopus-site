@@ -1,19 +1,82 @@
-import type { Metadata } from "next";
+"use client";
+
+import type React from "react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import AppLink from "@/components/AppLink";
-import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import HeroBackground from "@/components/HeroBackground";
 import Marquee from "@/components/Marquee";
 
-export const metadata: Metadata = {
-  title: "XOpus — Facturation intelligente pour artisans et indépendants",
-  description:
-    "La plateforme de facturation 100% française pour artisans, indépendants et TPE. Devis, factures, paiements en ligne et conformité loi anti-fraude TVA. 9,99€/mois tout inclus.",
+/* ── Easing personnalisé ── */
+const easeLuxe = [0.22, 1, 0.36, 1] as const;
+
+/* ── Variants d'animation ── */
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: easeLuxe, delay: i * 0.1 },
+  }),
 };
 
+const stagger = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: easeLuxe } },
+};
+
+const slideInLeft = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: easeLuxe } },
+};
+
+const slideInRight = {
+  hidden: { opacity: 0, x: 60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: easeLuxe } },
+};
+
+/* ── Section wrapper with InView ── */
+function Section({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-8%" });
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={stagger}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+  return (
+    <motion.div
+      className={className}
+      variants={fadeUp}
+      custom={delay}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-8%" }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+/* ── Données ── */
 const HOME_FEATURES = [
   {
     icon: (
@@ -174,6 +237,45 @@ const FAQ_JSON_LD = {
   ],
 };
 
+/* ── Counter animé ── */
+function AnimatedCounter({ value, label, delay = 0 }: { value: string; label: string; delay?: number }) {
+  return (
+    <motion.div
+      className="site-counter"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay, ease: easeLuxe }}
+    >
+      <strong>{value}</strong>
+      <span>{label}</span>
+    </motion.div>
+  );
+}
+
+/* ── Compteur de visite (fun) ── */
+function LiveCounter() {
+  const [count, setCount] = useState(1247);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((c) => c + Math.floor(Math.random() * 3));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+  return (
+    <motion.span
+      className="site-badge"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 1.5 }}
+      style={{ background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.2)", fontSize: 12 }}
+    >
+      <span className="site-badge-dot" />
+      {count} artisans nous ont rejoints
+    </motion.span>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -183,34 +285,80 @@ export default function HomePage() {
       <SiteHeader />
 
       <main className="site-main">
-        {/* ── HERO ── */}
+        {/* ════════════════════════════════════════════════════
+            HERO — Nouveau design tricolore avec particules LED
+           ════════════════════════════════════════════════════ */}
         <section className="site-hero">
           <HeroBackground />
+
+          {/* Bandeau LED défilant */}
+          <motion.div
+            className="site-led-banner"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 5 }}
+          >
+            <div className="site-led-banner-text">
+              <span>✨ NOUVEAU : Factur-X automatique généré !</span>
+              <span>🇫🇷 100% Français et hébergé en France</span>
+              <span>🔒 Conforme loi anti-fraude TVA 2026</span>
+              <span>💳 Paiement Stripe intégré</span>
+              <span>⚡ Facturation en 2 clics</span>
+            </div>
+          </motion.div>
+
           <div className="site-hero-split">
             <div className="site-hero-copy">
-              <Reveal>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: easeLuxe }}
+              >
                 <span className="site-badge-pulse">
                   <span className="site-badge-dot" />
-                  🚀 Lancement
+                  🚀 Lancement 2026
                 </span>
-              </Reveal>
+              </motion.div>
 
-              <h1 className="site-title" style={{ marginTop: 20 }}>
-                Facturez comme
+              <motion.h1
+                className="site-title"
+                style={{ marginTop: 20 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.15, ease: easeLuxe }}
+              >
+                La facturation{" "}
+                <span className="site-title-accent">tricolore</span>
                 <br />
-                <span className="site-title-accent">un pro.</span>
-              </h1>
+                pour les pros.
+              </motion.h1>
 
-              <div className="site-tricolor" />
+              <motion.div
+                className="site-tricolor"
+                initial={{ width: 0, opacity: 0 }}
+                animate={{ width: 100, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              />
 
-              <p className="site-lead">
-                La plateforme de facturation <strong>100% française</strong> pour
-                artisans, indépendants et TPE. Devis, factures, paiements en ligne
-                et conformité loi anti-fraude TVA.{" "}
+              <motion.p
+                className="site-lead"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.35 }}
+              >
+                Le logiciel de facturation <strong>100% français</strong>,
+                conforme à la loi anti-fraude TVA 2026. Devis, factures
+                électroniques Factur-X, paiements en ligne.{" "}
                 <strong>9,99 €/mois tout inclus.</strong>
-              </p>
+              </motion.p>
 
-              <div className="site-hero-cta-group">
+              <motion.div
+                className="site-hero-cta-group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.5, ease: easeLuxe }}
+              >
                 <AppLink
                   intent="register"
                   className="site-btn site-btn-primary site-btn-lg"
@@ -223,17 +371,35 @@ export default function HomePage() {
                 >
                   Découvrir XOpus
                 </Link>
-              </div>
+              </motion.div>
 
-              <p className="site-hero-note">
+              <motion.p
+                className="site-hero-note"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+              >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
                 Sans carte bancaire · Résiliation en 1 clic
-              </p>
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 }}
+              >
+                <LiveCounter />
+              </motion.div>
             </div>
 
-            <div className="site-hero-visual">
+            <motion.div
+              className="site-hero-visual"
+              initial={{ opacity: 0, x: 60, rotateY: -10 }}
+              animate={{ opacity: 1, x: 0, rotateY: 0 }}
+              transition={{ duration: 1, delay: 0.3, ease: easeLuxe }}
+            >
               <div className="site-mockup-glow" />
               <div className="site-mockup">
                 <div className="site-mockup-head">
@@ -253,20 +419,26 @@ export default function HomePage() {
                   <strong>654,00 €</strong>
                 </div>
                 <div className="site-mockup-pay">
-                  <span className="site-btn site-btn-primary" style={{ fontSize: 13, padding: "10px 24px" }}>
+                  <span className="site-btn" style={{ fontSize: 13, padding: "10px 24px" }}>
                     Payer maintenant
                   </span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* ── MARQUEE ── */}
+        {/* ── MARQUEE LED ── */}
         <Marquee />
 
         {/* ── TRUST BAR ── */}
-        <div className="site-trust-bar">
+        <motion.div
+          className="site-trust-bar"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="site-trust-item">
             <span className="site-trust-icon">🔒</span> Données hébergées en France
           </span>
@@ -282,77 +454,94 @@ export default function HomePage() {
           <span className="site-trust-item">
             <span className="site-trust-icon">📧</span> Support réactif
           </span>
-        </div>
+        </motion.div>
 
         {/* ── PROOF STATS ── */}
-        <section className="site-section">
-          <Reveal>
-            <div className="site-proof">
-              {PROOF.map((p) => (
-                <div key={p.label} className="site-counter">
-                  <strong>{p.value}</strong>
-                  <span>{p.label}</span>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </section>
+        <Section className="site-section">
+          <div className="site-proof">
+            {PROOF.map((p, i) => (
+              <AnimatedCounter key={p.label} value={p.value} label={p.label} delay={i * 0.15} />
+            ))}
+          </div>
+        </Section>
 
         {/* ── FEATURES ── */}
         <section className="site-section site-section--gradient">
           <div className="site-mesh-bg" />
-          <Reveal>
+          <Section>
             <div className="site-section-head site-section-head--centered">
-              <span className="site-eyebrow">Fonctionnalités</span>
-              <h2 className="site-section-title">
-                Tout ce dont vous avez besoin,{" "}
-                <span className="site-title-accent">rien de plus.</span>
-              </h2>
+              <FadeUp>
+                <span className="site-eyebrow">Fonctionnalités</span>
+              </FadeUp>
+              <FadeUp delay={0.1}>
+                <h2 className="site-section-title">
+                  Tout ce dont vous avez besoin,{" "}
+                  <span className="site-title-accent">rien de plus.</span>
+                </h2>
+              </FadeUp>
             </div>
-          </Reveal>
+          </Section>
 
           <div className="site-grid">
             {HOME_FEATURES.map((f, i) => (
-              <Reveal key={f.title} delay={i * 80}>
-                <div className="site-card site-glass">
-                  <div className="site-card-icon">{f.icon}</div>
-                  <h3>{f.title}</h3>
-                  <p>{f.desc}</p>
-                </div>
-              </Reveal>
+              <motion.div
+                key={f.title}
+                className="site-card site-glass"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-8%" }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: easeLuxe }}
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              >
+                <div className="site-card-icon">{f.icon}</div>
+                <h3>{f.title}</h3>
+                <p>{f.desc}</p>
+              </motion.div>
             ))}
           </div>
         </section>
 
         {/* ── STEPS ── */}
-        <section className="site-section">
-          <Reveal>
-            <div className="site-section-head site-section-head--centered">
+        <Section className="site-section">
+          <div className="site-section-head site-section-head--centered">
+            <FadeUp>
               <span className="site-eyebrow">Comment ça marche</span>
+            </FadeUp>
+            <FadeUp delay={0.1}>
               <h2 className="site-section-title">
                 En marche en{" "}
                 <span className="site-title-accent">3 étapes.</span>
               </h2>
-            </div>
-          </Reveal>
+            </FadeUp>
+          </div>
 
           <div className="site-steps">
             {STEPS.map((s, i) => (
-              <Reveal key={s.title} delay={i * 120}>
-                <div className="site-step">
-                  <div className="site-step-num">{i + 1}</div>
-                  <h3>{s.title}</h3>
-                  <p>{s.desc}</p>
-                </div>
-              </Reveal>
+              <motion.div
+                key={s.title}
+                className="site-step"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-8%" }}
+                transition={{ duration: 0.6, delay: i * 0.15, ease: easeLuxe }}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              >
+                <div className="site-step-num">{i + 1}</div>
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+              </motion.div>
             ))}
           </div>
-        </section>
+        </Section>
 
         {/* ── PROMO ── */}
-        <section className="site-section">
-          <Reveal>
-            <div className="site-promo site-promo--glow">
+        <Section className="site-section">
+          <FadeUp>
+            <motion.div
+              className="site-promo site-promo--glow"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+            >
               <span className="site-badge-pulse">
                 <span className="site-badge-dot" />
                 Offre de lancement
@@ -372,64 +561,72 @@ export default function HomePage() {
                   Commencer maintenant
                 </AppLink>
               </div>
-            </div>
-          </Reveal>
-        </section>
+            </motion.div>
+          </FadeUp>
+        </Section>
 
         {/* ── TESTIMONIALS ── */}
         <section className="site-section site-section--gradient">
-          <Reveal>
+          <Section>
             <div className="site-section-head site-section-head--centered">
-              <span className="site-eyebrow">Témoignages</span>
-              <h2 className="site-section-title">
-                Ils font confiance à{" "}
-                <span className="site-title-accent">XOpus.</span>
-              </h2>
+              <FadeUp>
+                <span className="site-eyebrow">Témoignages</span>
+              </FadeUp>
+              <FadeUp delay={0.1}>
+                <h2 className="site-section-title">
+                  Ils font confiance à{" "}
+                  <span className="site-title-accent">XOpus.</span>
+                </h2>
+              </FadeUp>
             </div>
-          </Reveal>
+          </Section>
 
           <div className="site-grid" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
             {TESTIMONIALS.map((t, i) => (
-              <Reveal key={t.name} delay={i * 100}>
-                <div className="site-testimonial site-glass">
-                  <div className="site-stars" style={{ marginBottom: 12 }}>
-                    {[...Array(5)].map((_, j) => (
-                      <svg key={j} width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" aria-hidden>
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p style={{ fontSize: 14.5, lineHeight: 1.7, color: "var(--muted)" }}>
-                    {t.text}
-                  </p>
-                  <div className="site-testimonial-author">
-                    <div className="site-testimonial-avatar">
-                      {t.name.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="site-testimonial-name">{t.name}</div>
-                      <div className="site-testimonial-role">{t.role}</div>
-                    </div>
+              <motion.div
+                key={t.name}
+                className="site-testimonial site-glass"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-8%" }}
+                transition={{ duration: 0.6, delay: i * 0.12, ease: easeLuxe }}
+                whileHover={{ y: -6, transition: { duration: 0.3 } }}
+              >
+                <div className="site-stars" style={{ marginBottom: 12 }}>
+                  {[...Array(5)].map((_, j) => (
+                    <svg key={j} width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" aria-hidden>
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  ))}
+                </div>
+                <p style={{ fontSize: 14.5, lineHeight: 1.7, color: "var(--muted)" }}>{t.text}</p>
+                <div className="site-testimonial-author">
+                  <div className="site-testimonial-avatar">{t.name.charAt(0)}</div>
+                  <div>
+                    <div className="site-testimonial-name">{t.name}</div>
+                    <div className="site-testimonial-role">{t.role}</div>
                   </div>
                 </div>
-              </Reveal>
+              </motion.div>
             ))}
           </div>
         </section>
 
         {/* ── FAQ ── */}
-        <section className="site-section">
-          <Reveal>
-            <div className="site-section-head site-section-head--centered">
+        <Section className="site-section">
+          <div className="site-section-head site-section-head--centered">
+            <FadeUp>
               <span className="site-eyebrow">Questions fréquentes</span>
+            </FadeUp>
+            <FadeUp delay={0.1}>
               <h2 className="site-section-title">
                 Vous avez des{" "}
                 <span className="site-title-accent">questions ?</span>
               </h2>
-            </div>
-          </Reveal>
+            </FadeUp>
+          </div>
 
-          <Reveal delay={100}>
+          <FadeUp delay={0.2}>
             <div className="site-faq">
               <details>
                 <summary>XOpus est-il conforme à la loi anti-fraude TVA ?</summary>
@@ -469,12 +666,16 @@ export default function HomePage() {
                 </p>
               </details>
             </div>
-          </Reveal>
-        </section>
+          </FadeUp>
+        </Section>
 
         {/* ── CTA BAND ── */}
-        <Reveal>
-          <div className="site-cta-band site-cta-band--shimmer">
+        <FadeUp>
+          <motion.div
+            className="site-cta-band site-cta-band--shimmer"
+            whileHover={{ scale: 1.01 }}
+            transition={{ type: "spring", stiffness: 200, damping: 15 }}
+          >
             <h2>Prêt à facturer comme un pro ?</h2>
             <p>
               Rejoignez les milliers d'artisans et indépendants qui font
@@ -494,8 +695,8 @@ export default function HomePage() {
                 Nous contacter
               </Link>
             </div>
-          </div>
-        </Reveal>
+          </motion.div>
+        </FadeUp>
       </main>
 
       <SiteFooter />

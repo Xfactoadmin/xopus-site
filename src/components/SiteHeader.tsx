@@ -45,7 +45,7 @@ export default function SiteHeader() {
                 fontSize: 22,
                 fontWeight: 900,
                 letterSpacing: "-0.02em",
-                background: "linear-gradient(135deg, #0F2B6E 0%, #3D6BE6 50%, #3B82F6 100%)",
+                background: "linear-gradient(135deg, #002395 0%, #1A4CFF 50%, #3B82F6 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
