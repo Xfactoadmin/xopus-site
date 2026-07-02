@@ -6,6 +6,7 @@ import AppLink from "@/components/AppLink";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import HeroBackground from "@/components/HeroBackground";
+import Marquee from "@/components/Marquee";
 
 export const metadata: Metadata = {
   title: "XOpus — Facturation intelligente pour artisans et indépendants",
@@ -260,6 +261,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* ── MARQUEE ── */}
+        <Marquee />
 
         {/* ── TRUST BAR ── */}
         <div className="site-trust-bar">
