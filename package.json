@@ -4,19 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next-sitemap --config next-sitemap.config.js",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "sitemap": "next-sitemap --config next-sitemap.config.js",
-    "postbuild": "next-sitemap --config next-sitemap.config.js"
+    "lint": "eslint"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
     "@supabase/supabase-js": "^2.108.2",
+    "framer-motion": "^12.42.2",
     "next": "16.2.9",
     "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "framer-motion": "^12.10.5"
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@types/node": "^20",

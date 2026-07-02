@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-import { motion } from "framer-motion";
 
 type MarqueeItem = {
   icon: string;
@@ -25,14 +24,7 @@ const ITEMS: MarqueeItem[] = [
 
 export default function Marquee() {
   return (
-    <motion.div
-      className="site-marquee"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      aria-hidden
-    >
+    <div className="site-marquee" aria-hidden>
       <div className="site-marquee-track">
         {[...ITEMS, ...ITEMS].map((item, i) => (
           <span key={i} className="site-marquee-item">
@@ -41,6 +33,6 @@ export default function Marquee() {
           </span>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
