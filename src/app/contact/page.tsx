@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Reveal from "@/components/Reveal";
-
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Contactez l'équipe XOpus pour toute question sur notre logiciel de facturation français. Support réactif par email.",
-};
 
 export default function ContactPage() {
   return (
