@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import "../styles/site-vitrine.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://xopus.fr"),
   title: {
     default: "XOpus — Facturation intelligente pour artisans et indépendants",
     template: "%s | XOpus",
@@ -66,9 +67,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className="site-wrapper">
-        <div className="site-shell">
-          {children}
-        </div>
+        <div className="site-shell">{children}</div>
       </body>
     </html>
   );
