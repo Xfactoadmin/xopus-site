@@ -10,9 +10,9 @@ import Marquee from "@/components/Marquee";
 
 export const metadata: Metadata = {
   title:
-    "XOpus — Logiciel de facturation 100% français pour artisans & indépendants | 9,99€/mois",
+    "XOpus — Logiciel de facturation 100% français pour artisans, indépendants, PME et toutes structures | 9,99€/mois",
   description:
-    "XOpus est le logiciel de facturation 100% français pour artisans, indépendants et TPE. Devis, factures Factur-X, paiements en ligne, conformité loi anti-fraude TVA. 9,99€/mois tout inclus. Essai gratuit 14 jours.",
+    "XOpus est le logiciel de facturation 100% français pour artisans, indépendants, TPE, PME et toutes structures. Devis, factures Factur-X, paiements en ligne, conformité loi anti-fraude TVA. 9,99€/mois tout inclus. Essai gratuit 14 jours.",
 };
 
 const HOME_FEATURES = [
@@ -267,7 +267,9 @@ export default function HomePage() {
                 <br />
                 <span className="site-title-accent">100% français</span> pour
                 <br />
-                artisans & indépendants
+                artisans, indépendants, PME &
+                <br />
+                <span className="site-title-accent">toutes structures</span>
               </h1>
 
               <div className="site-tricolor" />
