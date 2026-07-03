@@ -5,9 +5,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 const NAV = [
+  { href: "/", label: "Accueil" },
   { href: "/fonctionnalites", label: "Fonctionnalités" },
   { href: "/tarifs", label: "Tarifs" },
-  { href: "/conformite", label: "Conformité" },
+  { href: "/auto-entrepreneur", label: "Auto-entrepreneur" },
   { href: "/comparateur", label: "Comparateur" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -27,7 +28,9 @@ export default function SiteHeader() {
   /* lock body scroll when mobile menu is open */
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   const toggleMenu = useCallback(() => setMenuOpen((o) => !o), []);
@@ -45,7 +48,8 @@ export default function SiteHeader() {
                 fontSize: 22,
                 fontWeight: 900,
                 letterSpacing: "-0.02em",
-                background: "linear-gradient(135deg, #0F2B6E 0%, #3D6BE6 50%, #3B82F6 100%)",
+                background:
+                  "linear-gradient(135deg, #0F2B6E 0%, #3D6BE6 50%, #3B82F6 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -56,21 +60,14 @@ export default function SiteHeader() {
 
           <nav className="site-nav" aria-label="Navigation principale">
             {NAV.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="site-nav-link"
-              >
+              <Link key={item.href} href={item.href} className="site-nav-link">
                 {item.label}
               </Link>
             ))}
           </nav>
 
           <div className="site-header-actions">
-            <Link
-              href="https://app.xopus.fr/login"
-              className="site-link-ghost"
-            >
+            <Link href="https://app.xopus.fr/login" className="site-link-ghost">
               Connexion
             </Link>
             <Link
@@ -103,7 +100,11 @@ export default function SiteHeader() {
         className={`site-mobile-menu${menuOpen ? " is-open" : ""}`}
         aria-hidden={!menuOpen}
       >
-        <div className="site-mobile-menu-panel" role="dialog" aria-label="Menu mobile">
+        <div
+          className="site-mobile-menu-panel"
+          role="dialog"
+          aria-label="Menu mobile"
+        >
           {NAV.map((item) => (
             <Link
               key={item.href}
