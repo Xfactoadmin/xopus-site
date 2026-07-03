@@ -196,7 +196,7 @@ export default function HomePage() {
               </Reveal>
 
               <h1 className="site-title" style={{ marginTop: 20 }}>
-                Facturez comme
+                Facturez comme un pro — v2
                 <br />
                 <span className="site-title-accent">un pro.</span>
               </h1>
