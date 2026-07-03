@@ -247,20 +247,36 @@ export default function HomePage() {
         {/* ── HERO ── */}
         <section className="site-hero">
           <HeroBackground />
-          <div className="site-hero-split">
-            <div className="site-hero-copy">
-              <Reveal>
-                <span className="site-badge-pulse">
-                  <span className="site-badge-dot" />
-                  🚀 Lancement
-                </span>
-              </Reveal>
 
+          {/* Titre sur toute la largeur */}
+          <div
+            style={{
+              position: "relative",
+              zIndex: 1,
+              textAlign: "center",
+              padding: "0 24px",
+            }}
+          >
+            <Reveal>
+              <span
+                className="site-badge-pulse"
+                style={{ marginBottom: 20, display: "inline-flex" }}
+              >
+                <span className="site-badge-dot" />
+                🚀 Lancement
+              </span>
+            </Reveal>
+
+            <Reveal delay={100}>
               <h1
                 className="site-title"
                 style={{
-                  marginTop: 20,
-                  fontSize: "clamp(2.2rem, 5vw, 3.8rem)",
+                  marginTop: 16,
+                  fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)",
+                  lineHeight: 1.08,
+                  maxWidth: 900,
+                  marginLeft: "auto",
+                  marginRight: "auto",
                 }}
               >
                 Le logiciel de facturation
@@ -271,12 +287,20 @@ export default function HomePage() {
                 <br />
                 <span className="site-title-accent">toutes structures</span>
               </h1>
+            </Reveal>
 
-              <div className="site-tricolor" />
+            <Reveal delay={200}>
+              <div className="site-tricolor" style={{ margin: "20px auto" }} />
+            </Reveal>
 
+            <Reveal delay={300}>
               <p
                 className="site-lead"
-                style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)", maxWidth: 560 }}
+                style={{
+                  fontSize: "clamp(1rem, 2vw, 1.25rem)",
+                  maxWidth: 620,
+                  margin: "0 auto",
+                }}
               >
                 <strong>Devis, factures, paiements en ligne</strong> et
                 conformité loi anti-fraude TVA. Le logiciel de facturation le
@@ -285,8 +309,13 @@ export default function HomePage() {
                   9,99 €/mois tout inclus.
                 </strong>
               </p>
+            </Reveal>
 
-              <div className="site-hero-cta-group">
+            <Reveal delay={400}>
+              <div
+                className="site-hero-cta-group"
+                style={{ justifyContent: "center", marginTop: 28 }}
+              >
                 <AppLink
                   intent="register"
                   className="site-btn site-btn-primary site-btn-lg"
@@ -300,8 +329,13 @@ export default function HomePage() {
                   Découvrir XOpus
                 </Link>
               </div>
+            </Reveal>
 
-              <p className="site-hero-note">
+            <Reveal delay={500}>
+              <p
+                className="site-hero-note"
+                style={{ justifyContent: "center" }}
+              >
                 <svg
                   width="14"
                   height="14"
@@ -317,37 +351,163 @@ export default function HomePage() {
                 </svg>
                 Sans carte bancaire · Résiliation en 1 clic
               </p>
-            </div>
+            </Reveal>
+          </div>
 
-            <div className="site-hero-visual">
-              <div className="site-mockup-glow" />
-              <div className="site-mockup">
-                <div className="site-mockup-head">
-                  <strong>Facture #2026-042</strong>
-                  <span className="site-mockup-chip">Payée</span>
+          {/* Image/mockup centrée en dessous avec blocs flottants */}
+          <div
+            style={{
+              position: "relative",
+              zIndex: 1,
+              maxWidth: 700,
+              margin: "40px auto 0",
+              padding: "0 24px",
+            }}
+          >
+            <Reveal delay={600}>
+              <div style={{ position: "relative" }}>
+                {/* Mockup principal */}
+                <div
+                  className="site-mockup"
+                  style={{
+                    margin: 0,
+                    maxWidth: 480,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <div className="site-mockup-head">
+                    <strong>Facture #2026-042</strong>
+                    <span className="site-mockup-chip">Payée</span>
+                  </div>
+                  <div className="site-mockup-row">
+                    <span>Installation plomberie</span>
+                    <span>480,00 €</span>
+                  </div>
+                  <div className="site-mockup-row">
+                    <span>Pièces détachées</span>
+                    <span>65,00 €</span>
+                  </div>
+                  <div className="site-mockup-total">
+                    <span>Total TTC</span>
+                    <strong>654,00 €</strong>
+                  </div>
+                  <div className="site-mockup-pay">
+                    <span
+                      className="site-btn site-btn-primary"
+                      style={{
+                        fontSize: 13,
+                        padding: "10px 24px",
+                        color: "#fff",
+                      }}
+                    >
+                      Payer maintenant
+                    </span>
+                  </div>
                 </div>
-                <div className="site-mockup-row">
-                  <span>Installation plomberie</span>
-                  <span>480,00 €</span>
-                </div>
-                <div className="site-mockup-row">
-                  <span>Pièces détachées</span>
-                  <span>65,00 €</span>
-                </div>
-                <div className="site-mockup-total">
-                  <span>Total TTC</span>
-                  <strong>654,00 €</strong>
-                </div>
-                <div className="site-mockup-pay">
-                  <span
-                    className="site-btn site-btn-primary"
-                    style={{ fontSize: 13, padding: "10px 24px" }}
+
+                {/* Bloc flottant 1 — Payée */}
+                <div
+                  className="site-hero-float-card"
+                  style={{
+                    position: "absolute",
+                    top: -20,
+                    left: 0,
+                    animation: "floatBounce 3s ease-in-out infinite",
+                  }}
+                >
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: 8 }}
                   >
-                    Payer maintenant
-                  </span>
+                    <span style={{ fontSize: 22 }}>✅</span>
+                    <div>
+                      <div
+                        style={{
+                          fontWeight: 700,
+                          fontSize: 13,
+                          color: "var(--text)",
+                        }}
+                      >
+                        Facture payée
+                      </div>
+                      <div
+                        style={{ fontSize: 11, color: "var(--muted, #6b7280)" }}
+                      >
+                        Stripe — Instantané
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bloc flottant 2 — Signature client */}
+                <div
+                  className="site-hero-float-card"
+                  style={{
+                    position: "absolute",
+                    bottom: 60,
+                    left: -30,
+                    animation: "floatBounce 3.5s ease-in-out infinite",
+                    animationDelay: "-1s",
+                  }}
+                >
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: 8 }}
+                  >
+                    <span style={{ fontSize: 22 }}>✍️</span>
+                    <div>
+                      <div
+                        style={{
+                          fontWeight: 700,
+                          fontSize: 13,
+                          color: "var(--text)",
+                        }}
+                      >
+                        Signature client
+                      </div>
+                      <div
+                        style={{ fontSize: 11, color: "var(--muted, #6b7280)" }}
+                      >
+                        Reçu le 03/07/2026
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bloc flottant 3 — Espace client */}
+                <div
+                  className="site-hero-float-card"
+                  style={{
+                    position: "absolute",
+                    top: 20,
+                    right: -20,
+                    animation: "floatBounce 4s ease-in-out infinite",
+                    animationDelay: "-2s",
+                  }}
+                >
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: 8 }}
+                  >
+                    <span style={{ fontSize: 22 }}>👤</span>
+                    <div>
+                      <div
+                        style={{
+                          fontWeight: 700,
+                          fontSize: 13,
+                          color: "var(--text)",
+                        }}
+                      >
+                        Espace client
+                      </div>
+                      <div
+                        style={{ fontSize: 11, color: "var(--muted, #6b7280)" }}
+                      >
+                        Portail en ligne
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
 
