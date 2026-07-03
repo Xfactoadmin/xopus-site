@@ -9,15 +9,26 @@ import HeroBackground from "@/components/HeroBackground";
 import Marquee from "@/components/Marquee";
 
 export const metadata: Metadata = {
-  title: "XOpus — Facturation intelligente pour artisans et indépendants",
+  title:
+    "Logiciel de Facturation N°1 en France 🇫🇷 | Artisans & Indépendants | XOpus",
   description:
-    "La plateforme de facturation 100% française pour artisans, indépendants et TPE. Devis, factures, paiements en ligne et conformité loi anti-fraude TVA. 9,99€/mois tout inclus.",
+    "XOpus : LE logiciel de facturation 100% français n°1 pour artisans, indépendants et TPE. Factur-X 2026, paiements Stripe, conforme loi anti-fraude TVA. 9,99€/mois tout inclus. Essai gratuit 14 jours sans CB. Créé par Fox Repair (Gabin NICAISE).",
 };
 
 const HOME_FEATURES = [
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
         <polyline points="14 2 14 8 20 8" />
         <line x1="16" y1="13" x2="8" y2="13" />
@@ -29,7 +40,17 @@ const HOME_FEATURES = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
         <line x1="1" y1="10" x2="23" y2="10" />
       </svg>
@@ -39,7 +60,17 @@ const HOME_FEATURES = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
@@ -48,7 +79,17 @@ const HOME_FEATURES = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <circle cx="12" cy="12" r="10" />
         <polyline points="12 6 12 12 16 14" />
       </svg>
@@ -58,7 +99,17 @@ const HOME_FEATURES = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
         <circle cx="9" cy="7" r="4" />
         <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -70,7 +121,17 @@ const HOME_FEATURES = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
         <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
         <line x1="12" y1="22.08" x2="12" y2="12" />
@@ -196,7 +257,7 @@ export default function HomePage() {
               </Reveal>
 
               <h1 className="site-title" style={{ marginTop: 20 }}>
-                Facturez comme un pro — v2
+                Facturez comme
                 <br />
                 <span className="site-title-accent">un pro.</span>
               </h1>
@@ -204,9 +265,9 @@ export default function HomePage() {
               <div className="site-tricolor" />
 
               <p className="site-lead">
-                La plateforme de facturation <strong>100% française</strong> pour
-                artisans, indépendants et TPE. Devis, factures, paiements en ligne
-                et conformité loi anti-fraude TVA.{" "}
+                La plateforme de facturation <strong>100% française</strong>{" "}
+                pour artisans, indépendants et TPE. Devis, factures, paiements
+                en ligne et conformité loi anti-fraude TVA.{" "}
                 <strong>9,99 €/mois tout inclus.</strong>
               </p>
 
@@ -226,7 +287,17 @@ export default function HomePage() {
               </div>
 
               <p className="site-hero-note">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden
+                >
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
                 Sans carte bancaire · Résiliation en 1 clic
@@ -253,7 +324,10 @@ export default function HomePage() {
                   <strong>654,00 €</strong>
                 </div>
                 <div className="site-mockup-pay">
-                  <span className="site-btn site-btn-primary" style={{ fontSize: 13, padding: "10px 24px" }}>
+                  <span
+                    className="site-btn site-btn-primary"
+                    style={{ fontSize: 13, padding: "10px 24px" }}
+                  >
                     Payer maintenant
                   </span>
                 </div>
@@ -268,7 +342,8 @@ export default function HomePage() {
         {/* ── TRUST BAR ── */}
         <div className="site-trust-bar">
           <span className="site-trust-item">
-            <span className="site-trust-icon">🔒</span> Données hébergées en France
+            <span className="site-trust-icon">🔒</span> Données hébergées en
+            France
           </span>
           <span className="site-trust-item">
             <span className="site-trust-icon">🛡️</span> Conforme RGPD
@@ -364,7 +439,10 @@ export default function HomePage() {
               <p style={{ color: "var(--muted)", fontSize: 15, marginTop: 8 }}>
                 /mois · tout inclus · sans engagement
               </p>
-              <div className="site-cta-row" style={{ justifyContent: "center", marginTop: 28 }}>
+              <div
+                className="site-cta-row"
+                style={{ justifyContent: "center", marginTop: 28 }}
+              >
                 <AppLink
                   intent="register"
                   className="site-btn site-btn-primary site-btn-lg"
@@ -388,18 +466,34 @@ export default function HomePage() {
             </div>
           </Reveal>
 
-          <div className="site-grid" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
+          <div
+            className="site-grid"
+            style={{ gridTemplateColumns: "repeat(3, 1fr)" }}
+          >
             {TESTIMONIALS.map((t, i) => (
               <Reveal key={t.name} delay={i * 100}>
                 <div className="site-testimonial site-glass">
                   <div className="site-stars" style={{ marginBottom: 12 }}>
                     {[...Array(5)].map((_, j) => (
-                      <svg key={j} width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" aria-hidden>
+                      <svg
+                        key={j}
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="#FBBF24"
+                        aria-hidden
+                      >
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                       </svg>
                     ))}
                   </div>
-                  <p style={{ fontSize: 14.5, lineHeight: 1.7, color: "var(--muted)" }}>
+                  <p
+                    style={{
+                      fontSize: 14.5,
+                      lineHeight: 1.7,
+                      color: "var(--muted)",
+                    }}
+                  >
                     {t.text}
                   </p>
                   <div className="site-testimonial-author">
@@ -432,7 +526,9 @@ export default function HomePage() {
           <Reveal delay={100}>
             <div className="site-faq">
               <details>
-                <summary>XOpus est-il conforme à la loi anti-fraude TVA ?</summary>
+                <summary>
+                  XOpus est-il conforme à la loi anti-fraude TVA ?
+                </summary>
                 <p>
                   Oui, XOpus est 100% conforme. Chaque facture est horodatée,
                   sécurisée et générée en format Factur-X (e-facture 2026). Vous
@@ -442,8 +538,8 @@ export default function HomePage() {
               <details>
                 <summary>Combien coûte XOpus ?</summary>
                 <p>
-                  XOpus coûte 9,99 €/mois tout inclus. Essai gratuit de 14 jours,
-                  sans engagement et sans carte bancaire.
+                  XOpus coûte 9,99 €/mois tout inclus. Essai gratuit de 14
+                  jours, sans engagement et sans carte bancaire.
                 </p>
               </details>
               <details>
@@ -457,8 +553,8 @@ export default function HomePage() {
                 <summary>XOpus est-il fait en France ?</summary>
                 <p>
                   Oui, XOpus est une solution 100% française, hébergée en France
-                  sur des serveurs certifiés. Les données sont stockées dans l'UE
-                  et conformes au RGPD.
+                  sur des serveurs certifiés. Les données sont stockées dans
+                  l'UE et conformes au RGPD.
                 </p>
               </details>
               <details>

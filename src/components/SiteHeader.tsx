@@ -27,7 +27,9 @@ export default function SiteHeader() {
   /* lock body scroll when mobile menu is open */
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   const toggleMenu = useCallback(() => setMenuOpen((o) => !o), []);
@@ -40,27 +42,12 @@ export default function SiteHeader() {
       >
         <div className="site-header-inner">
           <Link href="/" className="site-brand" aria-label="XOpus — Accueil">
-            <span
-              style={{
-                fontSize: 22,
-                fontWeight: 900,
-                letterSpacing: "-0.02em",
-                background: "linear-gradient(135deg, #0F2B6E 0%, #3D6BE6 50%, #3B82F6 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              XOpus
-            </span>
+            XOpus
           </Link>
 
           <nav className="site-nav" aria-label="Navigation principale">
             {NAV.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="site-nav-link"
-              >
+              <Link key={item.href} href={item.href} className="site-nav-link">
                 {item.label}
               </Link>
             ))}
@@ -68,17 +55,16 @@ export default function SiteHeader() {
 
           <div className="site-header-actions">
             <Link
-              href="https://app.xopus.fr/login"
-              className="site-link-ghost"
-            >
-              Connexion
-            </Link>
-            <Link
               href="https://app.xopus.fr/register"
               className="site-btn site-btn-primary"
-              style={{ padding: "10px 22px", fontSize: 13 }}
+              style={{
+                padding: "12px 24px",
+                fontSize: 15,
+                color: "white",
+                fontWeight: 600,
+              }}
             >
-              Essai gratuit
+              Essai gratuit 14 jours
             </Link>
 
             <button
@@ -103,7 +89,11 @@ export default function SiteHeader() {
         className={`site-mobile-menu${menuOpen ? " is-open" : ""}`}
         aria-hidden={!menuOpen}
       >
-        <div className="site-mobile-menu-panel" role="dialog" aria-label="Menu mobile">
+        <div
+          className="site-mobile-menu-panel"
+          role="dialog"
+          aria-label="Menu mobile"
+        >
           {NAV.map((item) => (
             <Link
               key={item.href}
@@ -117,16 +107,13 @@ export default function SiteHeader() {
 
           <div className="site-mobile-actions">
             <Link
-              href="https://app.xopus.fr/login"
-              className="site-mobile-nav-link"
-              onClick={() => setMenuOpen(false)}
-            >
-              Connexion
-            </Link>
-            <Link
               href="https://app.xopus.fr/register"
               className="site-btn site-btn-primary"
-              style={{ width: "100%", justifyContent: "center" }}
+              style={{
+                width: "100%",
+                justifyContent: "center",
+                color: "white",
+              }}
               onClick={() => setMenuOpen(false)}
             >
               Essai gratuit 14 jours

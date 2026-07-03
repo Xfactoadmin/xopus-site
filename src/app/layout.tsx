@@ -5,47 +5,86 @@ import "../styles/site-vitrine.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://xopus.fr"),
   title: {
-    default: "XOpus — Facturation intelligente pour artisans et indépendants",
-    template: "%s | XOpus",
+    default:
+      "XOpus — Logiciel de Facturation N°1 en France 🇫🇷 | Artisans & Indépendants",
+    template: "%s | XOpus — Logiciel Facturation N°1",
   },
   description:
-    "XOpus est la plateforme de facturation 100% française pour artisans, indépendants et TPE. Devis, factures, paiements en ligne et conformité loi anti-fraude TVA.",
+    "XOpus est LE logiciel de facturation 100% français n°1 pour artisans, indépendants et TPE. Devis illimités, factures Factur-X conformes 2026, paiements en ligne Stripe. Conforme loi anti-fraude TVA. 9,99€/mois tout inclus. Essai gratuit 14 jours sans CB.",
   keywords: [
-    "facturation",
-    "artisan",
-    "indépendant",
-    "facture",
-    "devis",
-    "loi anti-fraude TVA",
-    "paiement en ligne",
-    "TPE",
-    "micro-entreprise",
+    "logiciel facturation",
+    "logiciel facturation artisan",
+    "logiciel facturation indépendant",
+    "logiciel facturation TPE",
+    "logiciel facturation français",
+    "facturation conforme loi anti-fraude TVA",
+    "Factur-X",
+    "e-facture 2026",
+    "logiciel facturation en ligne",
+    "logiciel devis facture",
+    "paiement en ligne Stripe",
+    "logiciel facturation pas cher",
+    "logiciel facturation 9.99 euros",
+    "meilleur logiciel facturation France",
+    "XOpus",
+    "Fox Repair",
+    "Gabin NICAISE",
+    "auto-entrepreneur facturation",
+    "micro-entreprise facturation",
+    "plombier facturation",
+    "électricien facturation",
+    "artisan bâtiment facturation",
+    "RGPD conforme",
     "🇫🇷",
   ],
-  authors: [{ name: "XOpus" }],
+  authors: [{ name: "Fox Repair" }, { name: "Gabin NICAISE" }],
+  creator: "Fox Repair",
+  publisher: "Fox Repair",
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "https://xopus.fr",
-    siteName: "XOpus",
-    title: "XOpus — Facturation intelligente pour artisans et indépendants",
+    siteName: "XOpus — Logiciel de Facturation N°1 en France",
+    title:
+      "XOpus — Logiciel Facturation N°1 France 🇫🇷 | Artisans & Indépendants",
     description:
-      "Devis, factures, paiements en ligne et conformité loi anti-fraude TVA. 100% français, 9,99€/mois tout inclus.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+      "Devis illimités, factures Factur-X 2026, paiements en ligne Stripe. Conforme loi anti-fraude TVA. 100% français, RGPD. 9,99€/mois tout inclus. Essai gratuit 14 jours.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "XOpus - Logiciel de Facturation N°1 en France",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "XOpus — Facturation intelligente",
+    site: "@xopus_fr",
+    creator: "@xopus_fr",
+    title: "XOpus — Logiciel Facturation N°1 France",
     description:
-      "La plateforme de facturation 100% française pour artisans et indépendants.",
+      "Le logiciel de facturation 100% français pour artisans et indépendants. Factur-X, paiements en ligne, conforme loi anti-fraude TVA. 9,99€/mois.",
     images: ["/og-image.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     canonical: "https://xopus.fr",
+  },
+  category: "Business Software",
+  classification: "Logiciel de facturation pour artisans et indépendants",
+  other: {
+    "google-site-verification": "YOUR_GOOGLE_VERIFICATION_CODE",
   },
 };
 
@@ -68,6 +107,41 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className="site-wrapper">
         <div className="site-shell">{children}</div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "XOpus",
+              legalName: "Fox Repair",
+              url: "https://xopus.fr",
+              logo: "https://xopus.fr/logo.png",
+              foundingDate: "2025",
+              founders: [
+                {
+                  "@type": "Person",
+                  name: "Gabin NICAISE",
+                },
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "FR",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+33-X-XX-XX-XX-XX",
+                contactType: "customer service",
+                email: "contact@xopus.fr",
+                availableLanguage: "French",
+              },
+              sameAs: [
+                "https://twitter.com/xopus_fr",
+                "https://linkedin.com/company/xopus",
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );

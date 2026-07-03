@@ -1,0 +1,51 @@
+feat: redesign complet ultra-moderne + pages légales + SEO boost
+
+🎨 Design Ultra-Moderne
+- Nouveau design system SaaS avec thème Bleu-Blanc-Rouge 🇫🇷
+- Fond légèrement foncé (#0A0E1B) pour un look premium
+- Animations wow: fade-in, float, glow, shimmer, marquee
+- Dégradés signature bleu→rouge pour les CTA
+- Particules flottantes et blobs lumineux animés dans le hero
+- Header glassmorphism sans bouton connexion, texte blanc dans CTA
+
+📄 Pages Légales Modernes
+- Mentions Légales: Fox Repair, Gabin NICAISE (président/créateur/webmaster)
+- CGV: conditions de vente complètes, tarifs 9,99€/mois
+- CGU: conditions d'utilisation détaillées
+- Confidentialité: politique RGPD complète et transparente
+- Design élégant avec blocs visuels et icônes SVG
+
+🚀 SEO Boost - Objectif N°1 France
+- Métadonnées enrichies: 50+ mots-clés ciblés
+- Sitemap XML généré automatiquement
+- Robots.txt optimisé
+- PWA Manifest avec icônes et screenshots
+- JSON-LD structured data (Organization, FAQPage, SoftwareApplication)
+- Titre optimisé: "Logiciel de Facturation N°1 en France"
+
+🎯 UX & Performance
+- Nouvelle barre de menu ultra-moderne
+- Bandeau défilant avec pause au hover
+- Révélations au scroll (Reveal component)
+- Build Next.js réussi avec static generation
+- Responsive design mobile/tablet/desktop
+- Performance Lighthouse optimisée
+
+🔧 Corrections
+- Fix: typo CSS font-size
+- Fix: manifest purpose type
+- Fix: liens footer confidentialité
+
+📦 Nouveaux Fichiers
+- src/app/mentions-legales/page.tsx
+- src/app/cgv/page.tsx
+- src/app/cgu/page.tsx
+- src/app/confidentialite/page.tsx
+- src/app/sitemap.ts
+- src/app/robots.ts
+- src/app/manifest.ts
+- README.md
+- CHANGELOG.md
+- TODO.md
+
+Created by Fox Repair — Gabin NICAISE
