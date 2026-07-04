@@ -9,14 +9,6 @@ import { NextResponse } from "next/server";
 export function middleware(request: NextRequest) {
   const response = NextResponse.next();
 
-  /* ── Redirection www → non-www ── */
-  const host = request.headers.get("host") ?? "";
-  if (host.startsWith("www.")) {
-    const url = request.nextUrl.clone();
-    url.hostname = host.replace("www.", "");
-    return NextResponse.redirect(url, { status: 301 });
-  }
-
   /* ── Refresh cookie Supabase (si présente) ── */
   const supabaseRefreshToken = request.cookies.get(
     "sb-ukqvaejnbiojnwmrykki-auth-token",
