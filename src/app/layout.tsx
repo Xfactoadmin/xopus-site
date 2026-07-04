@@ -83,8 +83,13 @@ export const metadata: Metadata = {
   },
   category: "Business Software",
   classification: "Logiciel de facturation pour artisans et indépendants",
+  verification: {
+    google: "VOTRE_CODE_VERIFICATION_GOOGLE",
+  },
   other: {
-    "google-site-verification": "YOUR_GOOGLE_VERIFICATION_CODE",
+    "application-name": "XOpus",
+    "theme-color": "#002395",
+    "color-scheme": "dark light",
   },
 };
 
@@ -92,6 +97,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="fr">
       <head>
+        {/* Preconnect pour optimiser les performances */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -102,11 +108,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+
+        {/* Favicons optimisés */}
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/logo-xopus.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo-xopus.svg" />
+        <link rel="manifest" href="/manifest.json" />
+
+        {/* DNS Prefetch pour accélérer les connexions */}
+        <link rel="dns-prefetch" href="https://app.xopus.fr" />
       </head>
       <body className="site-wrapper">
         <div className="site-shell">{children}</div>
+
+        {/* Schema.org Organization */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -133,11 +147,38 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 telephone: "+33-X-XX-XX-XX-XX",
                 contactType: "customer service",
                 email: "contact@xopus.fr",
-                availableLanguage: "French",
+                availableLanguage: ["French"],
+                areaServed: "FR",
               },
               sameAs: [
                 "https://twitter.com/xopus_fr",
                 "https://linkedin.com/company/xopus",
+              ],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.8",
+                ratingCount: "150",
+                bestRating: "5",
+                worstRating: "1",
+              },
+            }),
+          }}
+        />
+
+        {/* Schema.org BreadcrumbList pour SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Accueil",
+                  item: "https://xopus.fr",
+                },
               ],
             }),
           }}

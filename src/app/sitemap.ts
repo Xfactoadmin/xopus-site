@@ -3,6 +3,8 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://xopus.fr";
   const now = new Date();
+  const lastMonth = new Date();
+  lastMonth.setMonth(lastMonth.getMonth() - 1);
 
   return [
     {
@@ -61,9 +63,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/confidentialite`,
-      lastModified: now,
+      lastModified: lastMonth,
       changeFrequency: "yearly",
       priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/politique-confidentialite`,
+      lastModified: lastMonth,
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/securite-rgpd`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/pourquoi-xopus`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/auto-entrepreneur`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
   ];
 }

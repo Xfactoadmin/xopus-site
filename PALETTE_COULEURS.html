@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palette XOpus - Bleu Blanc Rouge 🇫🇷</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0f1e;
+            color: white;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #4F86F7 0%, #EF4444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 48px;
+            font-size: 18px;
+        }
+
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .color-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .color-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(79, 134, 247, 0.2);
+        }
+
+        .color-preview {
+            width: 100%;
+            height: 120px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .color-name {
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .color-code {
+            font-family: 'Courier New', monospace;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        .gradient-preview {
+            width: 100%;
+            height: 80px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .tricolor-bar {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #002395 0%, #ffffff 50%, #EF4444 100%);
+            border-radius: 4px;
+            margin: 32px 0;
+            box-shadow: 0 4px 30px rgba(79, 134, 247, 0.5), 0 4px 30px rgba(239, 68, 68, 0.5);
+        }
+
+        .demo-button {
+            display: inline-block;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #4F86F7 0%, #EF4444 100%);
+            color: white;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(79, 134, 247, 0.4);
+            margin: 8px;
+        }
+
+        .demo-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 40px rgba(79, 134, 247, 0.6), 0 4px 20px rgba(239, 68, 68, 0.4);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(79, 134, 247, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow-text">Palette XOpus 🇫🇷</h1>
+        <p class="subtitle">Design Bleu-Blanc-Rouge Premium</p>
+
+        <div class="tricolor-bar"></div>
+
+        <!-- Couleurs Principales -->
+        <div class="section">
+            <h2 class="section-title">🎨 Couleurs Principales</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-preview" style="background: #002395;"></div>
+                    <div class="color-name">Bleu France</div>
+                    <div class="color-code">#002395</div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #4F86F7;"></div>
+                    <div class="color-name">Bleu Clair</div>
+                    <div class="color-code">#4F86F7</div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.1);"></div>
+                    <div class="color-name">Blanc</div>
+                    <div class="color-code">#ffffff</div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #EF4444;"></div>
+                    <div class="color-name">Rouge France</div>
+                    <div class="color-code">#EF4444</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dégradés -->
+        <div class="section">
+            <h2 class="section-title">🌈 Dégradés Signature</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="gradient-preview" style="background: linear-gradient(90deg, #002395 0%, #ffffff 50%, #EF4444 100%);"></div>
+                    <div class="color-name">Tricolore Horizontal</div>
+                    <div class="color-code">90deg, Bleu → Blanc → Rouge</div>
+                </div>
+
+                <div class="color-card">
+                    <div class="gradient-preview" style="background: linear-gradient(135deg, #4F86F7 0%, #EF4444 100%);"></div>
+                    <div class="color-name">Bleu-Rouge Diagonal</div>
+                    <div class="color-code">135deg, Bleu → Rouge</div>
+                </div>
+
+                <div class="color-card">
+                    <div class="gradient-preview" style="background: linear-gradient(135deg, #002395 0%, #4F86F7 45%, #60a5fa 100%);"></div>
+                    <div class="color-name">Hero Gradient</div>
+                    <div class="color-code">Bleu France → Bleu Clair</div>
+                </div>
+
+                <div class="color-card">
+                    <div class="gradient-preview" style="background: linear-gradient(180deg, #002395 0%, #ffffff 50%, #EF4444 100%);"></div>
+                    <div class="color-name">France Vertical</div>
+                    <div class="color-code">180deg, Bleu → Blanc → Rouge</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Effets Glow -->
+        <div class="section">
+            <h2 class="section-title">✨ Effets Lumineux</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-preview" style="background: #4F86F7; box-shadow: 0 0 40px rgba(79, 134, 247, 0.5), 0 0 80px rgba(79, 134, 247, 0.2);"></div>
+                    <div class="color-name">Glow Bleu</div>
+                    <div class="color-code">Double Shadow</div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #EF4444; box-shadow: 0 0 40px rgba(239, 68, 68, 0.5), 0 0 80px rgba(239, 68, 68, 0.2);"></div>
+                    <div class="color-name">Glow Rouge</div>
+                    <div class="color-code">Double Shadow</div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: linear-gradient(135deg, #4F86F7 0%, #EF4444 100%); box-shadow: 0 0 60px rgba(79, 134, 247, 0.4), 0 0 100px rgba(239, 68, 68, 0.3);"></div>
+                    <div class="color-name">Glow Tricolore</div>
+                    <div class="color-code">Triple Shadow</div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #ffffff; box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);"></div>
+                    <div class="color-name">Glow Blanc</div>
+                    <div class="color-code">Soft Shadow</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Démo Boutons -->
+        <div class="section">
+            <h2 class="section-title">🎯 Boutons</h2>
+            <div style="text-align: center; padding: 32px; background: rgba(255,255,255,0.03); border-radius: 16px;">
+                <a href="#" class="demo-button">Accéder à l'application</a>
+                <a href="#" class="demo-button" style="background: rgba(79, 134, 247, 0.15); border: 1px solid rgba(79, 134, 247, 0.5);">Découvrir XOpus</a>
+            </div>
+        </div>
+
+        <div class="tricolor-bar"></div>
+
+        <p style="text-align: center; color: rgba(255,255,255,0.5); margin-top: 48px;">
+            Créé avec ❤️ par Fox Repair - Gabin NICAISE
+        </p>
+    </div>
+</body>
+</html>

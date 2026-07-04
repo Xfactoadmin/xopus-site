@@ -1,0 +1,36 @@
+{
+  "name": "XOpus - Logiciel de Facturation N°1 en France",
+  "short_name": "XOpus",
+  "description": "Logiciel de facturation 100% français pour artisans et indépendants. Factur-X 2026, paiements en ligne, conforme loi anti-fraude TVA.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f1e",
+  "theme_color": "#002395",
+  "orientation": "portrait-primary",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/logo-xopus.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Accéder à l'application",
+      "short_name": "Application",
+      "description": "Ouvrir l'application XOpus",
+      "url": "https://app.xopus.fr",
+      "icons": [
+        {
+          "src": "/logo-xopus.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}
