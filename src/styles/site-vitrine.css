@@ -37,6 +37,17 @@
     );
     --gradient-bleu-rouge: linear-gradient(135deg, #3b82f6 0%, #ed2939 100%);
 
+    /* Gradient animé premium */
+    --gradient-animated: linear-gradient(
+        135deg,
+        #3b82f6 0%,
+        #818cf8 20%,
+        #c084fc 40%,
+        #f472b6 60%,
+        #ed2939 80%,
+        #3b82f6 100%
+    );
+
     /* Texte */
     --color-text-primary: #ffffff;
     --color-text-secondary: rgba(255, 255, 255, 0.7);
@@ -340,18 +351,12 @@ button {
     font-size: 1.2rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-    background: linear-gradient(
-        135deg,
-        var(--color-bleu-clair) 0%,
-        var(--color-rouge-france) 40%,
-        var(--color-bleu-clair) 60%,
-        var(--color-rouge-france) 100%
-    );
-    background-size: 300% 300%;
+    background: var(--gradient-animated);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gradientShift 6s ease-in-out infinite;
+    animation: gradientShift 8s ease infinite;
 }
 
 .site-brand-logo {
@@ -378,18 +383,12 @@ button {
 .site-footer-logo-text {
     font-size: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(
-        135deg,
-        var(--color-bleu-clair) 0%,
-        var(--color-rouge-france) 40%,
-        var(--color-bleu-clair) 60%,
-        var(--color-rouge-france) 100%
-    );
-    background-size: 300% 300%;
+    background: var(--gradient-animated);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gradientShift 6s ease-in-out infinite;
+    animation: gradientShift 8s ease infinite;
 }
 
 /* ── Nav pill ── */
@@ -983,28 +982,30 @@ button {
 }
 
 .site-title-accent {
-    background: linear-gradient(
-        135deg,
-        var(--color-bleu-clair) 0%,
-        var(--color-rouge-france) 40%,
-        var(--color-bleu-clair) 60%,
-        var(--color-rouge-france) 100%
-    );
-    background-size: 300% 300%;
+    background: var(--gradient-animated);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: inline-block;
-    animation: gradientShift 6s ease-in-out infinite;
+    animation: gradientShift 8s ease infinite;
 }
 
 @keyframes gradientShift {
-    0%,
-    100% {
+    0% {
         background-position: 0% 50%;
     }
+    25% {
+        background-position: 100% 0%;
+    }
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
@@ -1185,18 +1186,12 @@ button {
 .site-mockup-total strong {
     font-size: 28px;
     font-weight: 800;
-    background: linear-gradient(
-        135deg,
-        var(--color-bleu-clair) 0%,
-        var(--color-rouge-france) 40%,
-        var(--color-bleu-clair) 60%,
-        var(--color-rouge-france) 100%
-    );
-    background-size: 300% 300%;
+    background: var(--gradient-animated);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gradientShift 6s ease-in-out infinite;
+    animation: gradientShift 8s ease infinite;
 }
 
 .site-mockup-pay {
@@ -1678,18 +1673,12 @@ button {
     font-size: clamp(36px, 5vw, 56px);
     font-weight: 900;
     margin-bottom: 16px;
-    background: linear-gradient(
-        135deg,
-        var(--color-bleu-clair) 0%,
-        var(--color-rouge-france) 40%,
-        var(--color-bleu-clair) 60%,
-        var(--color-rouge-france) 100%
-    );
-    background-size: 300% 300%;
+    background: var(--gradient-animated);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gradientShift 6s ease-in-out infinite;
+    animation: gradientShift 8s ease infinite;
 }
 
 .site-legal h2 {
@@ -2205,18 +2194,12 @@ button {
 }
 
 .site-pricing-card--highlighted .site-pricing-card__price {
-    background: linear-gradient(
-        135deg,
-        var(--color-bleu-clair) 0%,
-        var(--color-rouge-france) 40%,
-        var(--color-bleu-clair) 60%,
-        var(--color-rouge-france) 100%
-    );
-    background-size: 300% 300%;
+    background: var(--gradient-animated);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gradientShift 6s ease-in-out infinite;
+    animation: gradientShift 8s ease infinite;
 }
 
 .site-pricing-card__period {
@@ -2429,18 +2412,12 @@ button {
     text-align: center;
 }
 .text-gradient {
-    background: linear-gradient(
-        135deg,
-        var(--color-bleu-clair) 0%,
-        var(--color-rouge-france) 40%,
-        var(--color-bleu-clair) 60%,
-        var(--color-rouge-france) 100%
-    );
-    background-size: 300% 300%;
+    background: var(--gradient-animated);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gradientShift 6s ease-in-out infinite;
+    animation: gradientShift 8s ease infinite;
 }
 .mt-0 {
     margin-top: 0;
@@ -2486,22 +2463,26 @@ button {
     display: block;
     font-size: clamp(28px, 3.5vw, 44px);
     font-weight: 900;
-    background: var(--gradient-bleu-rouge);
+    background: var(--gradient-animated);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 8px;
+    animation: gradientShift 8s ease infinite;
 }
 
 .site-counter strong {
     display: block;
     font-size: clamp(28px, 3.5vw, 44px);
     font-weight: 900;
-    background: var(--gradient-bleu-rouge);
+    background: var(--gradient-animated);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 8px;
+    animation: gradientShift 8s ease infinite;
 }
 
 .site-counter span {
