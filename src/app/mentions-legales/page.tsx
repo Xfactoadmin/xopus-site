@@ -85,7 +85,7 @@ export default function MentionsLegalesPage() {
                 <strong>Directeur de la publication :</strong> Gabin NICAISE
                 <br />
                 <strong>Email :</strong>{" "}
-                <a href="mailto:contact@xopus.fr">contact@xopus.fr</a>
+                <a href="mailto:support@xopus.fr">support@xopus.fr</a>
               </p>
             </div>
           </Reveal>
@@ -203,7 +203,7 @@ export default function MentionsLegalesPage() {
                 <strong>Webmaster :</strong> Gabin NICAISE
                 <br />
                 <strong>Email :</strong>{" "}
-                <a href="mailto:gabin@xopus.fr">gabin@xopus.fr</a>
+                <a href="mailto:support@xopus.fr">support@xopus.fr</a>
               </p>
 
               <p>
@@ -284,7 +284,7 @@ export default function MentionsLegalesPage() {
               <p>
                 Pour exercer ces droits, vous pouvez nous contacter à l'adresse
                 suivante :{" "}
-                <a href="mailto:rgpd@xopus.fr">rgpd@xopus.fr</a>
+                <a href="mailto:support@xopus.fr">support@xopus.fr</a>
               </p>
 
               <p>
@@ -317,8 +317,8 @@ export default function MentionsLegalesPage() {
 
               <p>
                 <strong>Fox Repair</strong> s'efforce d'assurer l'exactitude et
-                la mise à jour des informations diffusées sur ce site. Toutefois,
-                elle ne peut garantir l'exactitude, la précision ou
+                la mise à jour des informations diffusées sur ce site.
+                Toutefois, elle ne peut garantir l'exactitude, la précision ou
                 l'exhaustivité des informations mises à disposition.
               </p>
 
@@ -329,10 +329,10 @@ export default function MentionsLegalesPage() {
               </p>
 
               <p>
-                Fox Repair ne saurait être tenue responsable des dommages directs
-                ou indirects causés au matériel de l'utilisateur lors de l'accès
-                au site, ou résultant de l'utilisation du site ou de services
-                accessibles via le site.
+                Fox Repair ne saurait être tenue responsable des dommages
+                directs ou indirects causés au matériel de l'utilisateur lors de
+                l'accès au site, ou résultant de l'utilisation du site ou de
+                services accessibles via le site.
               </p>
             </div>
           </Reveal>
@@ -357,10 +357,10 @@ export default function MentionsLegalesPage() {
               </h2>
 
               <p>
-                Les présentes mentions légales sont régies par le droit français.
-                En cas de litige et à défaut d'accord amiable, le litige sera
-                porté devant les tribunaux français conformément aux règles de
-                compétence en vigueur.
+                Les présentes mentions légales sont régies par le droit
+                français. En cas de litige et à défaut d'accord amiable, le
+                litige sera porté devant les tribunaux français conformément aux
+                règles de compétence en vigueur.
               </p>
             </div>
           </Reveal>
@@ -374,7 +374,7 @@ export default function MentionsLegalesPage() {
                 nous contacter :
               </p>
               <a
-                href="mailto:contact@xopus.fr"
+                href="mailto:support@xopus.fr"
                 className="site-btn site-btn-primary"
                 style={{ display: "inline-flex" }}
               >

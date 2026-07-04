@@ -45,7 +45,13 @@ export default function SiteHeader() {
         <div className="site-header-inner">
           {/* Logo */}
           <Link href="/" className="site-brand" aria-label="XOpus — Accueil">
-            <span className="site-brand-icon">⚡</span>
+            <img
+              src="/logo-xopus.svg"
+              alt=""
+              className="site-brand-logo"
+              width={36}
+              height={36}
+            />
             <span className="site-brand-text">XOpus</span>
           </Link>
 
@@ -115,7 +121,13 @@ export default function SiteHeader() {
               className="site-brand site-mobile-brand"
               onClick={() => setMenuOpen(false)}
             >
-              <span className="site-brand-icon">⚡</span>
+              <img
+                src="/logo-xopus.svg"
+                alt=""
+                className="site-brand-logo"
+                width={36}
+                height={36}
+              />
               <span className="site-brand-text">XOpus</span>
             </Link>
             <button

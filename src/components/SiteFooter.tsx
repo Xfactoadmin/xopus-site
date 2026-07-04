@@ -43,7 +43,16 @@ export default function SiteFooter() {
         <div className="site-footer-bento">
           {/* Brand */}
           <div className="site-footer-brand-box">
-            <div className="site-footer-logo">XOpus</div>
+            <div className="site-footer-logo-row">
+              <img
+                src="/logo-xopus.svg"
+                alt=""
+                className="site-footer-logo-img"
+                width={32}
+                height={32}
+              />
+              <span className="site-footer-logo-text">XOpus</span>
+            </div>
             <p className="site-footer-tagline">
               La plateforme de facturation 100% française pour artisans,
               indépendants et TPE. Conforme à la loi anti-fraude TVA.

@@ -80,8 +80,8 @@ export default function CGUPage() {
               </p>
 
               <p>
-                En créant un compte sur XOpus, l'Utilisateur reconnaît avoir pris
-                connaissance de ces conditions et s'engage à les respecter.
+                En créant un compte sur XOpus, l'Utilisateur reconnaît avoir
+                pris connaissance de ces conditions et s'engage à les respecter.
               </p>
 
               <p>
@@ -121,17 +121,19 @@ export default function CGUPage() {
               <ul className="site-list">
                 <li>La création de devis et factures illimités</li>
                 <li>
-                  La génération automatique de Factur-X (e-facture 2026) conforme
-                  à la loi anti-fraude TVA
+                  La génération automatique de Factur-X (e-facture 2026)
+                  conforme à la loi anti-fraude TVA
                 </li>
                 <li>Le suivi des paiements et relances automatiques</li>
                 <li>
-                  L'intégration de paiements en ligne via Stripe (carte bancaire,
-                  virement, prélèvement)
+                  L'intégration de paiements en ligne via Stripe (carte
+                  bancaire, virement, prélèvement)
                 </li>
                 <li>Un tableau de bord de suivi de trésorerie</li>
                 <li>Un espace client pour vos clients</li>
-                <li>Des modules complémentaires (XPortail, XRepair, XPay, etc.)</li>
+                <li>
+                  Des modules complémentaires (XPortail, XRepair, XPay, etc.)
+                </li>
               </ul>
 
               <p>
@@ -171,7 +173,9 @@ export default function CGUPage() {
               <ul className="site-list">
                 <li>Une adresse email valide</li>
                 <li>Un mot de passe sécurisé (minimum 8 caractères)</li>
-                <li>Ses informations professionnelles (nom, entreprise, SIRET)</li>
+                <li>
+                  Ses informations professionnelles (nom, entreprise, SIRET)
+                </li>
               </ul>
 
               <p>
@@ -189,7 +193,10 @@ export default function CGUPage() {
               <ul className="site-list">
                 <li>Ne pas partager ses identifiants avec des tiers</li>
                 <li>Utiliser un mot de passe robuste et unique</li>
-                <li>Informer immédiatement Fox Repair en cas d'utilisation non autorisée de son compte</li>
+                <li>
+                  Informer immédiatement Fox Repair en cas d'utilisation non
+                  autorisée de son compte
+                </li>
               </ul>
 
               <p>
@@ -200,13 +207,13 @@ export default function CGUPage() {
 
               <h3>3.3. Prérequis techniques</h3>
               <p>
-                L'accès à XOpus nécessite une connexion Internet et un navigateur
-                web moderne (Chrome, Firefox, Safari, Edge) à jour.
+                L'accès à XOpus nécessite une connexion Internet et un
+                navigateur web moderne (Chrome, Firefox, Safari, Edge) à jour.
               </p>
 
               <p>
-                L'Utilisateur est responsable de son équipement informatique et de
-                sa connexion Internet.
+                L'Utilisateur est responsable de son équipement informatique et
+                de sa connexion Internet.
               </p>
             </div>
           </Reveal>
@@ -234,32 +241,32 @@ export default function CGUPage() {
               <h3>4.1. Usage autorisé</h3>
               <p>
                 XOpus est destiné à un usage professionnel dans le cadre de la
-                gestion commerciale et de la facturation. L'Utilisateur s'engage à
-                utiliser le service de manière conforme à sa destination et aux
-                lois en vigueur.
+                gestion commerciale et de la facturation. L'Utilisateur s'engage
+                à utiliser le service de manière conforme à sa destination et
+                aux lois en vigueur.
               </p>
 
               <h3>4.2. Usages interdits</h3>
-              <p>
-                L'Utilisateur s'interdit formellement de :
-              </p>
+              <p>L'Utilisateur s'interdit formellement de :</p>
               <ul className="site-list">
-                <li>Utiliser le service à des fins illégales ou frauduleuses</li>
                 <li>
-                  Tenter d'accéder à des comptes ou données appartenant à d'autres
-                  utilisateurs
+                  Utiliser le service à des fins illégales ou frauduleuses
                 </li>
                 <li>
-                  Introduire des virus, malwares ou tout code malveillant dans la
-                  plateforme
+                  Tenter d'accéder à des comptes ou données appartenant à
+                  d'autres utilisateurs
                 </li>
                 <li>
-                  Surcharger ou perturber le fonctionnement des serveurs (attaque
-                  DDoS, spam, etc.)
+                  Introduire des virus, malwares ou tout code malveillant dans
+                  la plateforme
                 </li>
                 <li>
-                  Extraire, copier ou reproduire le code source ou la structure du
-                  logiciel (reverse engineering)
+                  Surcharger ou perturber le fonctionnement des serveurs
+                  (attaque DDoS, spam, etc.)
+                </li>
+                <li>
+                  Extraire, copier ou reproduire le code source ou la structure
+                  du logiciel (reverse engineering)
                 </li>
                 <li>
                   Utiliser des robots, scrapers ou tout outil automatisé pour
@@ -269,14 +276,12 @@ export default function CGUPage() {
                   Revendre, sous-licencier ou transférer son compte à un tiers
                   sans autorisation
                 </li>
-                <li>
-                  Créer de fausses factures ou documents frauduleux
-                </li>
+                <li>Créer de fausses factures ou documents frauduleux</li>
               </ul>
 
               <p>
-                Toute violation de ces interdictions peut entraîner la suspension
-                immédiate du compte et des poursuites judiciaires.
+                Toute violation de ces interdictions peut entraîner la
+                suspension immédiate du compte et des poursuites judiciaires.
               </p>
 
               <h3>4.3. Responsabilité du contenu</h3>
@@ -321,14 +326,15 @@ export default function CGUPage() {
 
               <p>
                 Fox Repair s'engage à protéger les données personnelles de
-                l'Utilisateur conformément au Règlement Général sur la Protection
-                des Données (RGPD) et à la loi Informatique et Libertés.
+                l'Utilisateur conformément au Règlement Général sur la
+                Protection des Données (RGPD) et à la loi Informatique et
+                Libertés.
               </p>
 
               <p>
                 Les données collectées sont utilisées exclusivement pour la
-                fourniture du service XOpus et ne sont jamais cédées à des tiers à
-                des fins commerciales.
+                fourniture du service XOpus et ne sont jamais cédées à des tiers
+                à des fins commerciales.
               </p>
 
               <p>
@@ -341,7 +347,7 @@ export default function CGUPage() {
                 L'Utilisateur dispose d'un droit d'accès, de rectification, de
                 suppression et d'opposition sur ses données personnelles, qu'il
                 peut exercer à tout moment en contactant{" "}
-                <a href="mailto:rgpd@xopus.fr">rgpd@xopus.fr</a>.
+                <a href="mailto:support@xopus.fr">support@xopus.fr</a>.
               </p>
             </div>
           </Reveal>
@@ -367,23 +373,24 @@ export default function CGUPage() {
               </h2>
 
               <p>
-                Le logiciel XOpus, son code source, son interface utilisateur, son
-                logo, ses textes, ses images et tous les éléments qui le composent
-                sont la propriété exclusive de <strong>Fox Repair</strong> et sont
-                protégés par le droit de la propriété intellectuelle.
+                Le logiciel XOpus, son code source, son interface utilisateur,
+                son logo, ses textes, ses images et tous les éléments qui le
+                composent sont la propriété exclusive de{" "}
+                <strong>Fox Repair</strong> et sont protégés par le droit de la
+                propriété intellectuelle.
               </p>
 
               <p>
-                Toute reproduction, représentation, modification, distribution ou
-                exploitation du logiciel, même partielle, sans autorisation écrite
-                préalable de Fox Repair, est strictement interdite et constitue
-                une contrefaçon passible de sanctions pénales.
+                Toute reproduction, représentation, modification, distribution
+                ou exploitation du logiciel, même partielle, sans autorisation
+                écrite préalable de Fox Repair, est strictement interdite et
+                constitue une contrefaçon passible de sanctions pénales.
               </p>
 
               <p>
                 L'Utilisateur bénéficie uniquement d'un droit d'usage non
-                exclusif et non transférable du logiciel, limité à la durée de son
-                abonnement.
+                exclusif et non transférable du logiciel, limité à la durée de
+                son abonnement.
               </p>
             </div>
           </Reveal>
@@ -424,8 +431,8 @@ export default function CGUPage() {
 
               <p>
                 En cas d'incident technique majeur, Fox Repair met tout en œuvre
-                pour rétablir le service dans les meilleurs délais et informer les
-                utilisateurs de l'avancement de la résolution.
+                pour rétablir le service dans les meilleurs délais et informer
+                les utilisateurs de l'avancement de la résolution.
               </p>
             </div>
           </Reveal>
@@ -466,8 +473,8 @@ export default function CGUPage() {
                   l'Utilisateur
                 </li>
                 <li>
-                  Interruption de service due à un cas de force majeure (panne de
-                  réseau, cyberattaque, catastrophe naturelle)
+                  Interruption de service due à un cas de force majeure (panne
+                  de réseau, cyberattaque, catastrophe naturelle)
                 </li>
                 <li>
                   Inexactitudes ou erreurs dans les documents générés par
@@ -516,22 +523,28 @@ export default function CGUPage() {
 
               <h3>9.2. Suspension ou résiliation par Fox Repair</h3>
               <p>
-                Fox Repair se réserve le droit de suspendre ou résilier un compte
-                utilisateur, sans préavis ni indemnité, en cas de :
+                Fox Repair se réserve le droit de suspendre ou résilier un
+                compte utilisateur, sans préavis ni indemnité, en cas de :
               </p>
               <ul className="site-list">
                 <li>Violation des présentes CGU</li>
                 <li>Non-paiement de l'abonnement après relance</li>
                 <li>Utilisation frauduleuse ou abusive du service</li>
-                <li>Activité illégale ou préjudiciable à Fox Repair ou à d'autres utilisateurs</li>
-                <li>Création de comptes multiples pour contourner les limitations</li>
+                <li>
+                  Activité illégale ou préjudiciable à Fox Repair ou à d'autres
+                  utilisateurs
+                </li>
+                <li>
+                  Création de comptes multiples pour contourner les limitations
+                </li>
               </ul>
 
               <h3>9.3. Conséquences de la résiliation</h3>
               <p>
                 Après résiliation, l'Utilisateur dispose d'un délai de{" "}
                 <strong>30 jours</strong> pour exporter ses données. Passé ce
-                délai, toutes les données pourront être définitivement supprimées.
+                délai, toutes les données pourront être définitivement
+                supprimées.
               </p>
             </div>
           </Reveal>
@@ -562,8 +575,8 @@ export default function CGUPage() {
 
               <p>
                 Toute modification sera communiquée aux Utilisateurs par email
-                et/ou notification dans l'application au moins <strong>30 jours</strong> avant
-                son entrée en vigueur.
+                et/ou notification dans l'application au moins{" "}
+                <strong>30 jours</strong> avant son entrée en vigueur.
               </p>
 
               <p>
@@ -594,7 +607,8 @@ export default function CGUPage() {
 
               <p>
                 Les présentes CGU sont régies par le droit français. En cas de
-                litige, les parties chercheront en priorité une solution amiable.
+                litige, les parties chercheront en priorité une solution
+                amiable.
               </p>
 
               <p>
@@ -609,7 +623,8 @@ export default function CGUPage() {
           <Reveal>
             <div style={{ textAlign: "center" }}>
               <p style={{ fontSize: 16, marginBottom: 24 }}>
-                Pour toute question concernant nos Conditions Générales d'Utilisation :
+                Pour toute question concernant nos Conditions Générales
+                d'Utilisation :
               </p>
               <div
                 style={{

@@ -102,8 +102,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/favicon.png" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/logo-xopus.svg" />
       </head>
       <body className="site-wrapper">
         <div className="site-shell">{children}</div>
@@ -116,7 +116,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               name: "XOpus",
               legalName: "Fox Repair",
               url: "https://xopus.fr",
-              logo: "https://xopus.fr/logo.png",
+              url: "https://xopus.fr/logo-xopus.svg",
               foundingDate: "2025",
               founders: [
                 {

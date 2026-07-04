@@ -190,7 +190,7 @@ const SECURITY_FAQ = [
   },
   {
     q: "Comment signaler une faille de sécurité ?",
-    a: "Si vous constatez ou suspectez une faille de sécurité, contactez immédiatement notre équipe à security@xopus.fr. Nous disposons d'une procédure d'incident documentée et nous répondons dans l'heure suivant la notification.",
+    a: "Si vous constatez ou suspectez une faille de sécurité, contactez immédiatement notre équipe à support@xopus.fr. Nous disposons d'une procédure d'incident documentée et nous répondons dans l'heure suivant la notification.",
   },
 ];
 
@@ -566,10 +566,10 @@ export default function SecuriteRgpdPage() {
                 vous pouvez contacter directement notre Délégué à la Protection
                 des Données à{" "}
                 <a
-                  href="mailto:dpo@xopus.fr"
+                  href="mailto:support@xopus.fr"
                   style={{ color: "#0055FF", textDecoration: "underline" }}
                 >
-                  dpo@xopus.fr
+                  support@xopus.fr
                 </a>
                 . Nous vous répondons sous 48h.
               </p>

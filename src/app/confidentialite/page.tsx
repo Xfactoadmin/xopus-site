@@ -48,8 +48,8 @@ export default function ConfidentialitePage() {
           <Reveal>
             <p style={{ fontSize: 18, marginBottom: 40 }}>
               Chez <strong>Fox Repair</strong>, créateur de{" "}
-              <strong>XOpus</strong>, nous accordons une importance primordiale à
-              la protection de vos données personnelles. Cette politique de
+              <strong>XOpus</strong>, nous accordons une importance primordiale
+              à la protection de vos données personnelles. Cette politique de
               confidentialité vous explique comment nous collectons, utilisons,
               stockons et protégeons vos informations conformément au{" "}
               <strong>RGPD</strong> (Règlement Général sur la Protection des
@@ -76,21 +76,20 @@ export default function ConfidentialitePage() {
                 1. Responsable du traitement des données
               </h2>
 
-              <p>
-                Le responsable du traitement des données personnelles est :
-              </p>
+              <p>Le responsable du traitement des données personnelles est :</p>
 
               <p>
                 <strong>Fox Repair</strong>
                 <br />
                 Représenté par : <strong>Gabin NICAISE</strong>
                 <br />
-                Adresse email : <a href="mailto:rgpd@xopus.fr">rgpd@xopus.fr</a>
+                Adresse email :{" "}
+                <a href="mailto:support@xopus.fr">support@xopus.fr</a>
               </p>
 
               <p>
-                Pour toute question concernant la protection de vos données, vous
-                pouvez nous contacter directement à l'adresse ci-dessus.
+                Pour toute question concernant la protection de vos données,
+                vous pouvez nous contacter directement à l'adresse ci-dessus.
               </p>
             </div>
           </Reveal>
@@ -152,7 +151,8 @@ export default function ConfidentialitePage() {
                   l'application, logs techniques
                 </li>
                 <li>
-                  <strong>Support :</strong> Échanges par email avec notre équipe
+                  <strong>Support :</strong> Échanges par email avec notre
+                  équipe
                 </li>
               </ul>
 
@@ -163,7 +163,8 @@ export default function ConfidentialitePage() {
                   système d'exploitation
                 </li>
                 <li>
-                  <strong>Navigation :</strong> Pages consultées, durée de visite
+                  <strong>Navigation :</strong> Pages consultées, durée de
+                  visite
                 </li>
                 <li>
                   <strong>Cookies :</strong> Cookies de session, préférences
@@ -232,43 +233,78 @@ export default function ConfidentialitePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <tr
+                    style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+                  >
                     <td style={{ padding: "12px 0" }}>
                       Fourniture du service XOpus
                     </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       Exécution du contrat
                     </td>
                   </tr>
-                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <tr
+                    style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+                  >
                     <td style={{ padding: "12px 0" }}>
                       Gestion des paiements et facturation
                     </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       Exécution du contrat
                     </td>
                   </tr>
-                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <tr
+                    style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+                  >
                     <td style={{ padding: "12px 0" }}>
                       Support client et assistance technique
                     </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       Exécution du contrat
                     </td>
                   </tr>
-                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <tr
+                    style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+                  >
                     <td style={{ padding: "12px 0" }}>
                       Respect des obligations légales (TVA, archivage)
                     </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       Obligation légale
                     </td>
                   </tr>
-                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <tr
+                    style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+                  >
                     <td style={{ padding: "12px 0" }}>
                       Amélioration du service et statistiques anonymisées
                     </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       Intérêt légitime
                     </td>
                   </tr>
@@ -276,7 +312,12 @@ export default function ConfidentialitePage() {
                     <td style={{ padding: "12px 0" }}>
                       Envoi d'emails marketing (newsletter, nouveautés)
                     </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       Consentement (opt-in)
                     </td>
                   </tr>
@@ -314,8 +355,8 @@ export default function ConfidentialitePage() {
 
               <h3>4.1. Sous-traitants techniques</h3>
               <p>
-                Nous faisons appel à des prestataires techniques de confiance pour
-                héberger et sécuriser vos données :
+                Nous faisons appel à des prestataires techniques de confiance
+                pour héberger et sécuriser vos données :
               </p>
 
               <ul className="site-list">
@@ -350,16 +391,20 @@ export default function ConfidentialitePage() {
                 par des garanties appropriées conformes au RGPD :
               </p>
               <ul className="site-list">
-                <li>Clauses contractuelles types de la Commission européenne</li>
+                <li>
+                  Clauses contractuelles types de la Commission européenne
+                </li>
                 <li>Certifications "Privacy Shield" ou équivalent</li>
                 <li>Mécanismes de protection renforcée des données</li>
               </ul>
 
               <h3>4.3. Pas de revente de données</h3>
               <p>
-                <strong>Nous ne vendons jamais vos données personnelles à des
-                tiers.</strong> Vos informations ne sont pas utilisées à des fins
-                publicitaires par des sociétés tierces.
+                <strong>
+                  Nous ne vendons jamais vos données personnelles à des tiers.
+                </strong>{" "}
+                Vos informations ne sont pas utilisées à des fins publicitaires
+                par des sociétés tierces.
               </p>
             </div>
           </Reveal>
@@ -384,8 +429,9 @@ export default function ConfidentialitePage() {
               </h2>
 
               <p>
-                Nous conservons vos données uniquement pendant la durée nécessaire
-                aux finalités pour lesquelles elles ont été collectées.
+                Nous conservons vos données uniquement pendant la durée
+                nécessaire aux finalités pour lesquelles elles ont été
+                collectées.
               </p>
 
               <table
@@ -422,43 +468,72 @@ export default function ConfidentialitePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <tr
+                    style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+                  >
                     <td style={{ padding: "12px 0" }}>
                       Données de compte (email, nom, entreprise)
                     </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       Durée de l'abonnement + 30 jours après résiliation
                     </td>
                   </tr>
-                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <tr
+                    style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+                  >
                     <td style={{ padding: "12px 0" }}>
                       Factures et documents comptables
                     </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       10 ans (obligation légale)
                     </td>
                   </tr>
-                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-                    <td style={{ padding: "12px 0" }}>
-                      Données de paiement
-                    </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                  <tr
+                    style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+                  >
+                    <td style={{ padding: "12px 0" }}>Données de paiement</td>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       13 mois (recommandation PCI-DSS)
                     </td>
                   </tr>
-                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <tr
+                    style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+                  >
                     <td style={{ padding: "12px 0" }}>
                       Logs techniques et statistiques
                     </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       12 mois maximum
                     </td>
                   </tr>
                   <tr>
-                    <td style={{ padding: "12px 0" }}>
-                      Cookies et traceurs
-                    </td>
-                    <td style={{ padding: "12px 0", color: "rgba(255,255,255,0.7)" }}>
+                    <td style={{ padding: "12px 0" }}>Cookies et traceurs</td>
+                    <td
+                      style={{
+                        padding: "12px 0",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
                       13 mois maximum
                     </td>
                   </tr>
@@ -494,8 +569,8 @@ export default function ConfidentialitePage() {
               <p>
                 Nous mettons en œuvre toutes les mesures techniques et
                 organisationnelles appropriées pour protéger vos données
-                personnelles contre tout accès non autorisé, perte, destruction ou
-                altération.
+                personnelles contre tout accès non autorisé, perte, destruction
+                ou altération.
               </p>
 
               <h3>6.1. Mesures techniques</h3>
@@ -538,16 +613,16 @@ export default function ConfidentialitePage() {
                   Audits de sécurité réguliers et mises à jour des systèmes
                 </li>
                 <li>
-                  Sensibilisation de l'équipe aux bonnes pratiques de sécurité et
-                  RGPD
+                  Sensibilisation de l'équipe aux bonnes pratiques de sécurité
+                  et RGPD
                 </li>
               </ul>
 
               <h3>6.3. En cas de violation de données</h3>
               <p>
                 En cas de violation de données personnelles susceptible
-                d'engendrer un risque élevé pour vos droits et libertés, nous nous
-                engageons à :
+                d'engendrer un risque élevé pour vos droits et libertés, nous
+                nous engageons à :
               </p>
               <ul className="site-list">
                 <li>
@@ -555,7 +630,8 @@ export default function ConfidentialitePage() {
                 </li>
                 <li>Vous informer dans les meilleurs délais</li>
                 <li>
-                  Prendre toutes les mesures nécessaires pour limiter les impacts
+                  Prendre toutes les mesures nécessaires pour limiter les
+                  impacts
                 </li>
               </ul>
             </div>
@@ -606,8 +682,8 @@ export default function ConfidentialitePage() {
 
               <h3>7.4. Droit à la limitation du traitement</h3>
               <p>
-                Vous pouvez demander de geler temporairement le traitement de vos
-                données dans certaines circonstances (ex : contestation de
+                Vous pouvez demander de geler temporairement le traitement de
+                vos données dans certaines circonstances (ex : contestation de
                 l'exactitude des données).
               </p>
 
@@ -632,13 +708,11 @@ export default function ConfidentialitePage() {
               </p>
 
               <h3>7.8. Comment exercer vos droits ?</h3>
-              <p>
-                Pour exercer l'un de ces droits, vous pouvez :
-              </p>
+              <p>Pour exercer l'un de ces droits, vous pouvez :</p>
               <ul className="site-list">
                 <li>
                   Nous contacter par email :{" "}
-                  <a href="mailto:rgpd@xopus.fr">rgpd@xopus.fr</a>
+                  <a href="mailto:support@xopus.fr">support@xopus.fr</a>
                 </li>
                 <li>
                   Accéder aux paramètres de votre compte sur{" "}
@@ -653,9 +727,9 @@ export default function ConfidentialitePage() {
 
               <h3>7.9. Droit de réclamation</h3>
               <p>
-                Si vous estimez que vos droits ne sont pas respectés, vous pouvez
-                déposer une réclamation auprès de la CNIL (Commission Nationale de
-                l'Informatique et des Libertés) :
+                Si vous estimez que vos droits ne sont pas respectés, vous
+                pouvez déposer une réclamation auprès de la CNIL (Commission
+                Nationale de l'Informatique et des Libertés) :
               </p>
               <p>
                 <a
@@ -701,31 +775,33 @@ export default function ConfidentialitePage() {
               <h3>8.2. Cookies utilisés sur XOpus</h3>
               <ul className="site-list">
                 <li>
-                  <strong>Cookies strictement nécessaires :</strong> Permettent le
-                  fonctionnement de l'authentification et des sessions (durée : 7
-                  jours)
+                  <strong>Cookies strictement nécessaires :</strong> Permettent
+                  le fonctionnement de l'authentification et des sessions (durée
+                  : 7 jours)
                 </li>
                 <li>
                   <strong>Cookies de préférences :</strong> Mémorisent vos choix
                   (langue, thème, etc.) (durée : 12 mois)
                 </li>
                 <li>
-                  <strong>Cookies analytiques :</strong> Nous aident à comprendre
-                  comment vous utilisez le site pour l'améliorer (si vous avez
-                  donné votre consentement)
+                  <strong>Cookies analytiques :</strong> Nous aident à
+                  comprendre comment vous utilisez le site pour l'améliorer (si
+                  vous avez donné votre consentement)
                 </li>
               </ul>
 
               <p>
-                <strong>Nous n'utilisons pas de cookies publicitaires ou de
-                cookies tiers à des fins de tracking.</strong>
+                <strong>
+                  Nous n'utilisons pas de cookies publicitaires ou de cookies
+                  tiers à des fins de tracking.
+                </strong>
               </p>
 
               <h3>8.3. Gestion des cookies</h3>
               <p>
-                Vous pouvez à tout moment refuser ou supprimer les cookies via les
-                paramètres de votre navigateur. Cependant, cela peut affecter
-                certaines fonctionnalités du site.
+                Vous pouvez à tout moment refuser ou supprimer les cookies via
+                les paramètres de votre navigateur. Cependant, cela peut
+                affecter certaines fonctionnalités du site.
               </p>
             </div>
           </Reveal>
@@ -784,7 +860,7 @@ export default function ConfidentialitePage() {
                 }}
               >
                 <a
-                  href="mailto:rgpd@xopus.fr"
+                  href="mailto:support@xopus.fr"
                   className="site-btn site-btn-primary"
                 >
                   Contacter le DPO
