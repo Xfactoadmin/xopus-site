@@ -66,6 +66,12 @@
     --z-header: 1000;
     --z-mobile-menu: 999;
     --z-modal: 2000;
+
+    /* Aliases compat */
+    --text: var(--color-text-primary);
+    --muted: var(--color-text-muted);
+    --surface: var(--color-bg-card);
+    --bleu: var(--color-bleu-clair);
 }
 
 /* ────────── Reset & Base ────────── */
@@ -1367,47 +1373,6 @@ button {
     line-height: 1.6;
 }
 
-/* ────────── PROOF BAR ────────── */
-.site-proof {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 32px;
-    padding: 60px var(--container-padding);
-}
-
-.site-proof > div {
-    text-align: center;
-    padding: 32px;
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
-    transition: all var(--transition-base);
-}
-
-.site-proof > div:hover {
-    transform: translateY(-4px);
-    border-color: var(--color-border-hover);
-    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
-}
-
-.site-proof strong {
-    display: block;
-    font-size: clamp(32px, 4vw, 48px);
-    font-weight: 900;
-    background: var(--gradient-bleu-rouge);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 8px;
-}
-
-.site-proof span {
-    font-size: 15px;
-    color: var(--color-text-secondary);
-}
-
 /* ────────── BANDEAU DÉFILANT (MARQUEE) ────────── */
 .site-marquee {
     width: 100%;
@@ -1606,71 +1571,6 @@ button {
     line-height: 1.7;
 }
 
-/* ────────── PRICING CARDS ────────── */
-.site-pricing-card {
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: 24px;
-    padding: 40px;
-    position: relative;
-    transition: all var(--transition-smooth);
-}
-
-.site-pricing-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--color-border-hover);
-    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
-}
-
-.site-pricing-card--highlighted {
-    border-color: var(--color-bleu-clair);
-    box-shadow: 0 0 50px rgba(59, 130, 246, 0.2);
-}
-
-.site-pricing-card--highlighted::before {
-    content: "POPULAIRE";
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 6px 16px;
-    background: var(--gradient-bleu-rouge);
-    color: white;
-    font-size: 12px;
-    font-weight: 700;
-    border-radius: 20px;
-}
-
-.site-pricing-card__price {
-    font-size: 56px;
-    font-weight: 900;
-    background: var(--gradient-bleu-rouge);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 24px;
-}
-
-.site-pricing-card__features {
-    list-style: none;
-    margin: 32px 0;
-}
-
-.site-pricing-card__features li {
-    padding: 12px 0;
-    padding-left: 32px;
-    position: relative;
-    color: var(--color-text-secondary);
-}
-
-.site-pricing-card__features li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #10b981;
-    font-weight: 700;
-}
-
 /* ────────── LISTE ────────── */
 .site-list {
     list-style: none;
@@ -1723,44 +1623,6 @@ button {
 .ico--gold {
     background: rgba(251, 191, 36, 0.1);
     color: #fbbf24;
-}
-
-/* ────────── TABLE COMPARAISON ────────── */
-.site-table-wrap {
-    overflow-x: auto;
-    margin: 0 auto;
-    max-width: var(--container-max);
-}
-
-.site-compare-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.site-compare-table th,
-.site-compare-table td {
-    padding: 20px;
-    text-align: left;
-    border-bottom: 1px solid var(--color-border);
-}
-
-.site-compare-table thead th {
-    background: rgba(59, 130, 246, 0.1);
-    font-weight: 700;
-    color: var(--color-text-primary);
-}
-
-.site-compare-table th.col-xopus,
-.site-compare-table td.cell-win {
-    background: rgba(59, 130, 246, 0.05);
-}
-
-.site-compare-table tbody tr:hover {
-    background: rgba(255, 255, 255, 0.02);
 }
 
 /* ────────── PAGES LÉGALES MODERNES ────────── */
