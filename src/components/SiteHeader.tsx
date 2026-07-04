@@ -164,7 +164,7 @@ export default function SiteHeader() {
               onClick={() => setMenuOpen(false)}
             >
               <span className="site-header-cta-text">
-                Essai gratuit 14 jours
+                Accéder à l'application
               </span>
             </Link>
           </div>
