@@ -4,7 +4,7 @@ import { useState } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Reveal from "@/components/Reveal";
-import AppLink from "@/components/AppLink";
+
 import JsonLd from "@/components/JsonLd";
 
 type FaqItem = { q: string; a: string };
@@ -189,12 +189,9 @@ export default function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
                   flexWrap: "wrap",
                 }}
               >
-                <AppLink
-                  intent="register"
-                  className="site-btn site-btn-primary"
-                >
+                <Link href='https://app.xopus.fr'>
                   Démarrer gratuitement
-                </AppLink>
+                </Link>
                 <a
                   href="mailto:support@xopus.fr"
                   className="site-btn site-btn-ghost"
@@ -214,12 +211,9 @@ export default function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
               14 jours gratuits, sans carte bancaire. Résiliation en 1 clic.
             </p>
             <div className="site-cta-row" style={{ justifyContent: "center" }}>
-              <AppLink
-                intent="register"
-                className="site-btn site-btn-primary site-btn-lg"
-              >
+              <Link href='https://app.xopus.fr'>
                 Commencer gratuitement
-              </AppLink>
+              </Link>
             </div>
           </div>
         </Reveal>

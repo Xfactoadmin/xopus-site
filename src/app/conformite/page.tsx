@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import AppLink from "@/components/AppLink";
+
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -136,9 +136,9 @@ export default function ConformitePage() {
               concentrez sur votre métier, on s'occupe du reste.
             </p>
             <div className="site-cta-row" style={{ justifyContent: "center" }}>
-              <AppLink intent="register" className="site-btn site-btn-primary site-btn-lg">
-                Essai gratuit 14 jours
-              </AppLink>
+              <Link href='https://app.xopus.fr'>
+                Accéder à l'application
+              </Link>
               <Link href="/contact" className="site-btn site-btn-ghost site-btn-lg">
                 Nous contacter
               </Link>

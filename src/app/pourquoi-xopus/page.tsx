@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Reveal from "@/components/Reveal";
-import AppLink from "@/components/AppLink";
+
 
 export const metadata: Metadata = {
   title: "Pourquoi choisir XOpus — Logiciel de facturation pour artisans",
@@ -666,12 +666,9 @@ export default function PourquoiXopusPage() {
               Zéro risque, zéro engagement.
             </p>
             <div className="site-cta-row" style={{ justifyContent: "center" }}>
-              <AppLink
-                intent="register"
-                className="site-btn site-btn-primary site-btn-lg"
-              >
-                Essai gratuit 14 jours
-              </AppLink>
+              <Link href='https://app.xopus.fr'>
+                Accéder à l'application
+              </Link>
               <Link
                 href="/tarifs"
                 className="site-btn site-btn-ghost site-btn-lg"

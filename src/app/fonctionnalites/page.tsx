@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import AppLink from "@/components/AppLink";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -230,12 +229,9 @@ export default function FonctionnalitesPage() {
               14 jours gratuits, sans carte bancaire. Résiliation en 1 clic.
             </p>
             <div className="site-cta-row" style={{ justifyContent: "center" }}>
-              <AppLink
-                intent="register"
-                className="site-btn site-btn-primary site-btn-lg"
-              >
+              <Link href='https://app.xopus.fr'>
                 Commencer gratuitement
-              </AppLink>
+              </Link>
               <Link
                 href="/tarifs"
                 className="site-btn site-btn-ghost site-btn-lg"

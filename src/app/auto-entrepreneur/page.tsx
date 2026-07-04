@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import AppLink from "@/components/AppLink";
+
 import Reveal from "@/components/Reveal";
 
 /* ------------------------------------------------------------------ */
@@ -184,9 +184,9 @@ export default function AutoEntrepreneurPage() {
               conformes en 2 minutes, sans expertise comptable requise.
             </p>
             <div style={{ display: "flex", gap: 12, justifyContent: "center", marginTop: 28, flexWrap: "wrap" }}>
-              <AppLink intent="register" className="site-btn site-btn-primary site-btn-lg">
+              <Link href='https://app.xopus.fr'>
                 Créez votre première facture
-              </AppLink>
+              </Link>
               <Link href="/tarifs" className="site-btn site-btn-ghost site-btn-lg">
                 Voir les tarifs
               </Link>
@@ -530,9 +530,9 @@ export default function AutoEntrepreneurPage() {
               d&apos;auto-entrepreneurs qui facturent malin avec XOpus.
             </p>
             <div className="site-cta-row" style={{ justifyContent: "center" }}>
-              <AppLink intent="register" className="site-btn site-btn-primary site-btn-lg">
+              <Link href='https://app.xopus.fr'>
                 Commencer gratuitement
-              </AppLink>
+              </Link>
               <Link href="/tarifs" className="site-btn site-btn-ghost site-btn-lg">
                 Voir les tarifs
               </Link>
