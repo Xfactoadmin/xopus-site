@@ -74,12 +74,6 @@ export default function SiteHeader() {
 
           {/* CTA */}
           <div className="site-header-actions">
-            <AppLink
-              href="https://app.xopus.fr/login"
-              className="site-header-login"
-            >
-              Connexion
-            </AppLink>
             <Link
               href="https://app.xopus.fr/register"
               className="site-header-cta"
@@ -172,13 +166,7 @@ export default function SiteHeader() {
                 Essai gratuit 14 jours
               </span>
             </Link>
-            <Link
-              href="https://app.xopus.fr/login"
-              className="site-mobile-login"
-              onClick={() => setMenuOpen(false)}
-            >
-              Déjà un compte ? Connexion
-            </Link>
+            
           </div>
         </div>
       </div>
