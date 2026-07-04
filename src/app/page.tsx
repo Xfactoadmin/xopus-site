@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title:
     "Logiciel de Facturation N°1 en France 🇫🇷 | Artisans & Indépendants | XOpus",
   description:
-    "XOpus : LE logiciel de facturation 100% français n°1 pour artisans, indépendants et TPE. Factur-X 2026, paiements Stripe, conforme loi anti-fraude TVA. 9,99€/mois tout inclus. Essai gratuit 14 jours sans CB. Créé par Fox Repair (Gabin NICAISE).",
+    "XOpus : LE logiciel de facturation 100% français n°1 pour artisans, indépendants et TPE. Factur-X 2026, paiements Stripe, conforme loi anti-fraude TVA. 9,99€/mois tout inclus. Accéder à l'application sans CB. Créé par Fox Repair (Gabin NICAISE).",
 };
 
 const HOME_FEATURES = [
@@ -276,7 +276,7 @@ export default function HomePage() {
                   intent="register"
                   className="site-btn site-btn-primary site-btn-lg"
                 >
-                  Essai gratuit 14 jours
+                  Accéder à l'application
                 </AppLink>
                 <Link
                   href="/fonctionnalites"

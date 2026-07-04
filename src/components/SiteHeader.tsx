@@ -75,11 +75,12 @@ export default function SiteHeader() {
           {/* CTA */}
           <div className="site-header-actions">
             <Link
-              href="https://app.xopus.fr/register"
+              href="https://app.xopus.fr"
               className="site-header-cta"
             >
-              <span className="site-header-cta-text">Essai gratuit</span>
-              <span className="site-header-cta-badge">14j</span>
+              <span className="site-header-cta-text">
+                Accéder à l'application
+              </span>
             </Link>
 
             <button
@@ -158,7 +159,7 @@ export default function SiteHeader() {
 
           <div className="site-mobile-menu-bottom">
             <Link
-              href="https://app.xopus.fr/register"
+              href="https://app.xopus.fr"
               className="site-header-cta site-mobile-cta"
               onClick={() => setMenuOpen(false)}
             >
@@ -166,7 +167,6 @@ export default function SiteHeader() {
                 Essai gratuit 14 jours
               </span>
             </Link>
-            
           </div>
         </div>
       </div>
