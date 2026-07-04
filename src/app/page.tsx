@@ -339,6 +339,20 @@ export default function HomePage() {
         {/* ── MARQUEE ── */}
         <Marquee />
 
+        {/* ── PROOF STATS ── */}
+        <section className="site-section">
+          <Reveal>
+            <div className="site-proof">
+              {PROOF.map((p) => (
+                <div key={p.label} className="site-counter">
+                  <strong>{p.value}</strong>
+                  <span>{p.label}</span>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </section>
+
         {/* ── TRUST BAR ── */}
         <div className="site-trust-bar">
           <span className="site-trust-item">
@@ -358,20 +372,6 @@ export default function HomePage() {
             <span className="site-trust-icon">📧</span> Support réactif
           </span>
         </div>
-
-        {/* ── PROOF STATS ── */}
-        <section className="site-section">
-          <Reveal>
-            <div className="site-proof">
-              {PROOF.map((p) => (
-                <div key={p.label} className="site-counter">
-                  <strong>{p.value}</strong>
-                  <span>{p.label}</span>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </section>
 
         {/* ── FEATURES ── */}
         <section className="site-section site-section--gradient">
