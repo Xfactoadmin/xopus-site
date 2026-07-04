@@ -340,10 +340,18 @@ button {
     font-size: 1.2rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-    background: var(--gradient-hero);
+    background: linear-gradient(
+        135deg,
+        var(--color-bleu-clair) 0%,
+        var(--color-rouge-france) 40%,
+        var(--color-bleu-clair) 60%,
+        var(--color-rouge-france) 100%
+    );
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientShift 6s ease-in-out infinite;
 }
 
 .site-brand-logo {
@@ -370,10 +378,18 @@ button {
 .site-footer-logo-text {
     font-size: 1.5rem;
     font-weight: 800;
-    background: var(--gradient-hero);
+    background: linear-gradient(
+        135deg,
+        var(--color-bleu-clair) 0%,
+        var(--color-rouge-france) 40%,
+        var(--color-bleu-clair) 60%,
+        var(--color-rouge-france) 100%
+    );
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientShift 6s ease-in-out infinite;
 }
 
 /* ── Nav pill ── */
@@ -967,11 +983,29 @@ button {
 }
 
 .site-title-accent {
-    background: var(--gradient-bleu-rouge);
+    background: linear-gradient(
+        135deg,
+        var(--color-bleu-clair) 0%,
+        var(--color-rouge-france) 40%,
+        var(--color-bleu-clair) 60%,
+        var(--color-rouge-france) 100%
+    );
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: inline-block;
+    animation: gradientShift 6s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .site-tricolor {
@@ -1151,10 +1185,18 @@ button {
 .site-mockup-total strong {
     font-size: 28px;
     font-weight: 800;
-    background: var(--gradient-bleu-rouge);
+    background: linear-gradient(
+        135deg,
+        var(--color-bleu-clair) 0%,
+        var(--color-rouge-france) 40%,
+        var(--color-bleu-clair) 60%,
+        var(--color-rouge-france) 100%
+    );
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientShift 6s ease-in-out infinite;
 }
 
 .site-mockup-pay {
@@ -1636,10 +1678,18 @@ button {
     font-size: clamp(36px, 5vw, 56px);
     font-weight: 900;
     margin-bottom: 16px;
-    background: var(--gradient-bleu-rouge);
+    background: linear-gradient(
+        135deg,
+        var(--color-bleu-clair) 0%,
+        var(--color-rouge-france) 40%,
+        var(--color-bleu-clair) 60%,
+        var(--color-rouge-france) 100%
+    );
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientShift 6s ease-in-out infinite;
 }
 
 .site-legal h2 {
@@ -2155,10 +2205,18 @@ button {
 }
 
 .site-pricing-card--highlighted .site-pricing-card__price {
-    background: var(--gradient-hero);
+    background: linear-gradient(
+        135deg,
+        var(--color-bleu-clair) 0%,
+        var(--color-rouge-france) 40%,
+        var(--color-bleu-clair) 60%,
+        var(--color-rouge-france) 100%
+    );
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientShift 6s ease-in-out infinite;
 }
 
 .site-pricing-card__period {
@@ -2371,10 +2429,18 @@ button {
     text-align: center;
 }
 .text-gradient {
-    background: var(--gradient-bleu-rouge);
+    background: linear-gradient(
+        135deg,
+        var(--color-bleu-clair) 0%,
+        var(--color-rouge-france) 40%,
+        var(--color-bleu-clair) 60%,
+        var(--color-rouge-france) 100%
+    );
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientShift 6s ease-in-out infinite;
 }
 .mt-0 {
     margin-top: 0;
