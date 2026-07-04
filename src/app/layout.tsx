@@ -116,7 +116,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               name: "XOpus",
               legalName: "Fox Repair",
               url: "https://xopus.fr",
-              url: "https://xopus.fr/logo-xopus.svg",
+              logo: "https://xopus.fr/logo-xopus.svg",
               foundingDate: "2025",
               founders: [
                 {
