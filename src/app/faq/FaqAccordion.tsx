@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Reveal from "@/components/Reveal";
@@ -47,13 +48,18 @@ export default function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
           <Reveal>
             <span className="site-eyebrow">Aide & Support</span>
             <h1 className="site-title" style={{ marginTop: 12 }}>
-              Questions{" "}
-              <span className="site-title-accent">fréquentes.</span>
+              Questions <span className="site-title-accent">fréquentes.</span>
             </h1>
-            <div className="site-tricolor" style={{ margin: "20px auto 24px" }} />
-            <p className="site-lead" style={{ maxWidth: 600, margin: "0 auto" }}>
-              Tout ce que vous devez savoir sur XOpus. Vous ne trouvez pas
-              votre réponse ?{" "}
+            <div
+              className="site-tricolor"
+              style={{ margin: "20px auto 24px" }}
+            />
+            <p
+              className="site-lead"
+              style={{ maxWidth: 600, margin: "0 auto" }}
+            >
+              Tout ce que vous devez savoir sur XOpus. Vous ne trouvez pas votre
+              réponse ?{" "}
               <a
                 href="mailto:support@xopus.fr"
                 style={{ color: "#0055FF", textDecoration: "underline" }}
@@ -122,7 +128,8 @@ export default function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
                     strokeLinejoin="round"
                     style={{
                       flexShrink: 0,
-                      transform: openIndex === i ? "rotate(180deg)" : "rotate(0deg)",
+                      transform:
+                        openIndex === i ? "rotate(180deg)" : "rotate(0deg)",
                       transition: "transform 0.3s ease",
                     }}
                     aria-hidden
@@ -165,7 +172,10 @@ export default function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
           }}
         >
           <Reveal>
-            <div className="site-card site-glass" style={{ padding: "3rem 2rem" }}>
+            <div
+              className="site-card site-glass"
+              style={{ padding: "3rem 2rem" }}
+            >
               <h2 className="site-section-title" style={{ marginBottom: 12 }}>
                 Encore une question ?
               </h2>
@@ -189,9 +199,7 @@ export default function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
                   flexWrap: "wrap",
                 }}
               >
-                <Link href='https://app.xopus.fr'>
-                  Démarrer gratuitement
-                </Link>
+                <Link href="https://app.xopus.fr">Démarrer gratuitement</Link>
                 <a
                   href="mailto:support@xopus.fr"
                   className="site-btn site-btn-ghost"
@@ -211,9 +219,7 @@ export default function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
               14 jours gratuits, sans carte bancaire. Résiliation en 1 clic.
             </p>
             <div className="site-cta-row" style={{ justifyContent: "center" }}>
-              <Link href='https://app.xopus.fr'>
-                Commencer gratuitement
-              </Link>
+              <Link href="https://app.xopus.fr">Commencer gratuitement</Link>
             </div>
           </div>
         </Reveal>
