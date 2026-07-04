@@ -1737,7 +1737,9 @@ button {
 .site-reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+    transition:
+        opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1),
+        transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .site-reveal.is-visible {
@@ -2388,25 +2390,59 @@ button {
    Added missing classes (34)
    ═══════════════════════════════════════ */
 
-/* ── Counters ── */
-.site-counter {
-    text-align: center;
-    padding: 1.5rem 1rem;
+/* ── Proof Stats (base grid) ── */
+.site-proof {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 0 var(--container-padding);
 }
-.site-counter strong {
+
+.site-proof > .site-counter {
+    text-align: center;
+    padding: 32px 16px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    transition:
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.site-proof > .site-counter:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.15);
+}
+
+.site-proof strong {
     display: block;
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: var(--gradient-hero);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900;
+    background: var(--gradient-bleu-rouge);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin-bottom: 8px;
 }
+
+.site-counter strong {
+    display: block;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900;
+    background: var(--gradient-bleu-rouge);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
 .site-counter span {
     display: block;
     font-size: 0.9rem;
     color: var(--color-text-muted);
-    margin-top: 0.4rem;
+    margin-top: 4px;
 }
 
 /* ── CTA Band shimmer variant ── */
