@@ -3,6 +3,7 @@
 import type React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NAV = [
   { href: "/", label: "Accueil" },
@@ -16,6 +17,7 @@ const NAV = [
 export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
   const headerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -25,7 +27,6 @@ export default function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* lock body scroll when mobile menu is open */
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
@@ -42,49 +43,62 @@ export default function SiteHeader() {
         className={`site-header${scrolled ? " scrolled" : ""}`}
       >
         <div className="site-header-inner">
+          {/* Logo */}
           <Link href="/" className="site-brand" aria-label="XOpus — Accueil">
-            XOpus
+            <span className="site-brand-icon">⚡</span>
+            <span className="site-brand-text">XOpus</span>
           </Link>
 
-          <nav className="site-nav" aria-label="Navigation principale">
-            {NAV.map((item) => (
-              <Link key={item.href} href={item.href} className="site-nav-link">
-                {item.label}
-              </Link>
-            ))}
+          {/* Nav pill */}
+          <nav className="site-nav-pill" aria-label="Navigation principale">
+            <div className="site-nav-pill-bg" />
+            {NAV.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`site-nav-pill-link${active ? " active" : ""}`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
+          {/* CTA */}
           <div className="site-header-actions">
+            <AppLink
+              href="https://app.xopus.fr/login"
+              className="site-header-login"
+            >
+              Connexion
+            </AppLink>
             <Link
               href="https://app.xopus.fr/register"
-              className="site-btn site-btn-primary"
-              style={{
-                padding: "12px 24px",
-                fontSize: 15,
-                color: "white",
-                fontWeight: 600,
-              }}
+              className="site-header-cta"
             >
-              Essai gratuit 14 jours
+              <span className="site-header-cta-text">Essai gratuit</span>
+              <span className="site-header-cta-badge">14j</span>
             </Link>
 
             <button
               type="button"
-              className="site-menu-toggle"
+              className={`site-menu-toggle${menuOpen ? " is-open" : ""}`}
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               aria-label="Ouvrir le menu"
               onClick={toggleMenu}
             >
-              <span />
-              <span />
-              <span />
+              <span className="site-menu-bar" />
+              <span className="site-menu-bar" />
+              <span className="site-menu-bar" />
             </button>
           </div>
         </div>
       </header>
 
-      {/* ── Mobile menu ── */}
+      {/* ── Mobile menu fullscreen ── */}
       <div
         id="mobile-menu"
         className={`site-mobile-menu${menuOpen ? " is-open" : ""}`}
@@ -95,33 +109,84 @@ export default function SiteHeader() {
           role="dialog"
           aria-label="Menu mobile"
         >
-          {NAV.map((item) => (
+          <div className="site-mobile-menu-top">
             <Link
-              key={item.href}
-              href={item.href}
-              className="site-mobile-nav-link"
+              href="/"
+              className="site-brand site-mobile-brand"
               onClick={() => setMenuOpen(false)}
             >
-              {item.label}
+              <span className="site-brand-icon">⚡</span>
+              <span className="site-brand-text">XOpus</span>
             </Link>
-          ))}
+            <button
+              type="button"
+              className="site-menu-toggle is-open"
+              aria-label="Fermer le menu"
+              onClick={toggleMenu}
+            >
+              <span className="site-menu-bar" />
+              <span className="site-menu-bar" />
+              <span className="site-menu-bar" />
+            </button>
+          </div>
 
-          <div className="site-mobile-actions">
+          <div className="site-mobile-menu-links">
+            {NAV.map((item, i) => {
+              const active = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`site-mobile-nav-link${active ? " active" : ""}`}
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    transitionDelay: menuOpen ? `${80 + i * 50}ms` : "0ms",
+                  }}
+                >
+                  <span className="site-mobile-nav-num">0{i + 1}</span>
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="site-mobile-menu-bottom">
             <Link
               href="https://app.xopus.fr/register"
-              className="site-btn site-btn-primary"
-              style={{
-                width: "100%",
-                justifyContent: "center",
-                color: "white",
-              }}
+              className="site-header-cta site-mobile-cta"
               onClick={() => setMenuOpen(false)}
             >
-              Essai gratuit 14 jours
+              <span className="site-header-cta-text">
+                Essai gratuit 14 jours
+              </span>
+            </Link>
+            <Link
+              href="https://app.xopus.fr/login"
+              className="site-mobile-login"
+              onClick={() => setMenuOpen(false)}
+            >
+              Déjà un compte ? Connexion
             </Link>
           </div>
         </div>
       </div>
     </>
+  );
+}
+
+/* Tiny helper to avoid importing AppLink just for one href */
+function AppLink({
+  href,
+  className,
+  children,
+}: {
+  href: string;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a href={href} className={className}>
+      {children}
+    </a>
   );
 }
