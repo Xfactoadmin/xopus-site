@@ -12,23 +12,37 @@ const LINKS = {
   ],
   support: [
     { href: "/contact", label: "Contact" },
+    { href: "/faq", label: "FAQ" },
     { href: "mailto:support@xopus.fr", label: "support@xopus.fr" },
-    { href: "/mentions-legales", label: "Mentions légales" },
   ],
   legal: [
-    { href: "/cgu", label: "CGU" },
+    { href: "/mentions-legales", label: "Mentions légales" },
     { href: "/cgv", label: "CGV" },
-    { href: "/confidentialite", label: "Confidentialité" },
+    { href: "/cgu", label: "CGU" },
+    { href: "/politique-confidentialite", label: "Confidentialité" },
+    { href: "/securite-rgpd", label: "Sécurité & RGPD" },
   ],
 } as const;
+
+const TRUST_BADGES = [
+  { icon: "🔒", label: "Données hébergées en France" },
+  { icon: "🛡️", label: "Conforme RGPD" },
+  { icon: "🇫🇷", label: "Entreprise française" },
+  { icon: "💳", label: "Paiement sécurisé Stripe" },
+  { icon: "⚡", label: "Support réactif" },
+];
 
 export default function SiteFooter() {
   return (
     <footer className="site-footer">
+      {/* Gradient tricolore en haut */}
+      <div className="site-footer-glow" />
+
       <div className="site-footer-inner">
-        <div className="site-footer-top">
+        {/* ── Top : Bento grid ── */}
+        <div className="site-footer-bento">
           {/* Brand */}
-          <div className="site-footer-brand">
+          <div className="site-footer-brand-box">
             <div className="site-footer-logo">XOpus</div>
             <p className="site-footer-tagline">
               La plateforme de facturation 100% française pour artisans,
@@ -73,9 +87,9 @@ export default function SiteFooter() {
           </div>
 
           {/* Produit */}
-          <div>
-            <h4 className="site-footer-links-title">Produit</h4>
-            <div className="site-footer-links">
+          <div className="site-footer-col">
+            <h4 className="site-footer-col-title">Produit</h4>
+            <div className="site-footer-col-links">
               {LINKS.produit.map((l) => (
                 <Link key={l.href} href={l.href}>
                   {l.label}
@@ -85,9 +99,9 @@ export default function SiteFooter() {
           </div>
 
           {/* Support */}
-          <div>
-            <h4 className="site-footer-links-title">Support</h4>
-            <div className="site-footer-links">
+          <div className="site-footer-col">
+            <h4 className="site-footer-col-title">Support</h4>
+            <div className="site-footer-col-links">
               {LINKS.support.map((l) => (
                 <Link key={l.href} href={l.href}>
                   {l.label}
@@ -97,9 +111,9 @@ export default function SiteFooter() {
           </div>
 
           {/* Newsletter */}
-          <div className="site-footer-newsletter">
-            <h4 className="site-footer-links-title">Newsletter</h4>
-            <p style={{ fontSize: 14, marginBottom: 14, lineHeight: 1.6 }}>
+          <div className="site-footer-newsletter-box">
+            <h4 className="site-footer-col-title">Newsletter</h4>
+            <p className="site-footer-newsletter-text">
               Recevez nos conseils facturation et les dernières actualités.
             </p>
             <form
@@ -120,15 +134,24 @@ export default function SiteFooter() {
           </div>
         </div>
 
+        {/* ── Trust badges ── */}
+        <div className="site-footer-trust-row">
+          {TRUST_BADGES.map((b) => (
+            <span key={b.label} className="site-footer-trust-badge">
+              <span>{b.icon}</span> {b.label}
+            </span>
+          ))}
+        </div>
+
+        {/* ── Divider ── */}
         <div className="site-footer-divider" />
 
+        {/* ── Bottom ── */}
         <div className="site-footer-bottom">
           <div className="site-footer-copy">
-            <span>
-              &copy; {new Date().getFullYear()} XOpus. Tous droits réservés.
-            </span>
-            <span style={{ opacity: 0.5 }}>·</span>
-            <span>Made in France 🇫🇷</span>
+            &copy; {new Date().getFullYear()} XOpus. Tous droits réservés.
+            <span className="site-footer-dot">·</span>
+            Made in France 🇫🇷
           </div>
           <div className="site-footer-legal">
             {LINKS.legal.map((l) => (
