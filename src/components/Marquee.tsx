@@ -28,7 +28,9 @@ export default function Marquee() {
       <div className="site-marquee-track">
         {[...ITEMS, ...ITEMS].map((item, i) => (
           <span key={i} className="site-marquee-item">
-            <span style={{ fontSize: 18 }}>{item.icon}</span>
+            <span className="site-marquee-icon" style={{ fontSize: 18 }}>
+              {item.icon}
+            </span>
             {item.label}
           </span>
         ))}

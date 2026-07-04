@@ -143,7 +143,7 @@ export default function TarifsPage() {
   return (
     <>
       <SiteHeader />
-      <main className="site-main" style={{ paddingTop: 100 }}>
+      <main className="site-main" className="site-page-hero">
         {/* ===== HERO ===== */}
         <section
           style={{
@@ -155,17 +155,17 @@ export default function TarifsPage() {
         >
           <Reveal>
             <span className="site-eyebrow">Tarifs</span>
-            <h1 className="site-title" style={{ marginTop: 12 }}>
+            <h1 className="site-title" className="site-title site-section-head-mt">
               Un tarif{" "}
               <span className="site-title-accent">simple, tout inclus.</span>
             </h1>
             <div
               className="site-tricolor"
-              style={{ margin: "20px auto 24px" }}
+              className="site-tricolor site-hero-tricolor"
             />
             <p
               className="site-lead"
-              style={{ maxWidth: 620, margin: "0 auto" }}
+              className="site-lead site-hero-lead"
             >
               Pas de frais cachés, pas de commission sur les paiements.
               Choisissez le plan qui correspond à votre activité et commencez à
@@ -190,7 +190,7 @@ export default function TarifsPage() {
             {/* --- Essai gratuit --- */}
             <Reveal delay={0}>
               <div className="site-pricing-card">
-                <span className="site-eyebrow" style={{ marginBottom: 8 }}>
+                <span className="site-eyebrow site-pricing-label">
                   Essai gratuit
                 </span>
                 <div className="site-pricing-card__price">0 €</div>
@@ -237,11 +237,11 @@ export default function TarifsPage() {
                     </li>
                   ))}
                 </ul>
-                <div style={{ marginTop: 24 }}>
+                <div className="site-pricing-cta">
                   <AppLink
                     intent="register"
                     className="site-btn site-btn-ghost"
-                    style={{ width: "100%", justifyContent: "center" }}
+                    className="site-btn site-btn-ghost site-pricing-cta-btn"
                   >
                     Commencer gratuitement
                   </AppLink>
@@ -254,7 +254,7 @@ export default function TarifsPage() {
               <div className="site-pricing-card site-pricing-card--highlighted">
                 <span
                   className="site-badge-pulse"
-                  style={{ alignSelf: "flex-start", marginBottom: 8 }}
+                  className="site-pricing-card-label"
                 >
                   <span className="site-badge-dot" />
                   Populaire
@@ -303,11 +303,11 @@ export default function TarifsPage() {
                     </li>
                   ))}
                 </ul>
-                <div style={{ marginTop: 24 }}>
+                <div className="site-pricing-cta">
                   <AppLink
                     intent="register"
                     className="site-btn site-btn-primary"
-                    style={{ width: "100%", justifyContent: "center" }}
+                    className="site-btn site-btn-ghost site-pricing-cta-btn"
                   >
                     Essai gratuit 14 jours
                   </AppLink>
@@ -318,7 +318,7 @@ export default function TarifsPage() {
             {/* --- Business --- */}
             <Reveal delay={200}>
               <div className="site-pricing-card">
-                <span className="site-eyebrow" style={{ marginBottom: 8 }}>
+                <span className="site-eyebrow site-pricing-label">
                   Business
                 </span>
                 <div className="site-pricing-card__price">29,99 €</div>
@@ -365,11 +365,11 @@ export default function TarifsPage() {
                     </li>
                   ))}
                 </ul>
-                <div style={{ marginTop: 24 }}>
+                <div className="site-pricing-cta">
                   <AppLink
                     intent="register"
                     className="site-btn site-btn-ghost"
-                    style={{ width: "100%", justifyContent: "center" }}
+                    className="site-btn site-btn-ghost site-pricing-cta-btn"
                   >
                     Contacter l&apos;équipe
                   </AppLink>
@@ -390,7 +390,7 @@ export default function TarifsPage() {
               </h2>
               <p
                 className="site-lead"
-                style={{ maxWidth: 560, margin: "12px auto 0" }}
+                className="site-lead site-compare-subtitle"
               >
                 Visualisez ce que chaque plan inclut pour choisir celui qui
                 correspond exactement à vos besoins.
@@ -434,8 +434,8 @@ export default function TarifsPage() {
 
         {/* ===== CTA intermédiaire ===== */}
         <Reveal>
-          <div style={{ textAlign: "center", padding: "3rem 24px" }}>
-            <p style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>
+          <div className="site-center-block">
+            <p className="site-center-heading">
               Encore des questions sur les tarifs ?
             </p>
             <p
@@ -541,8 +541,8 @@ export default function TarifsPage() {
           </Reveal>
 
           <Reveal delay={100}>
-            <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 24px" }}>
-              <div style={{ display: "grid", gap: 24 }}>
+            <div className="site-centered-block-lg">
+              <div className="site-why-xopus-grid">
                 <div
                   className="site-card"
                   style={{
@@ -725,7 +725,7 @@ export default function TarifsPage() {
               14 jours gratuits, sans carte bancaire. Découvrez XOpus en toute
               sérénité.
             </p>
-            <div className="site-cta-row" style={{ justifyContent: "center" }}>
+            <div className="site-cta-row site-cta-row-center">
               <AppLink
                 intent="register"
                 className="site-btn site-btn-primary site-btn-lg"

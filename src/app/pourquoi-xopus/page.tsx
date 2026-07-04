@@ -130,7 +130,7 @@ export default function PourquoiXopusPage() {
   return (
     <>
       <SiteHeader />
-      <main className="site-main" style={{ paddingTop: 100 }}>
+      <main className="site-main" className="site-page-hero">
         {/* Hero */}
         <section
           style={{
@@ -142,15 +142,15 @@ export default function PourquoiXopusPage() {
         >
           <Reveal>
             <span className="site-eyebrow">Pourquoi XOpus</span>
-            <h1 className="site-title" style={{ marginTop: 12 }}>
+            <h1 className="site-title" className="site-title site-section-head-mt">
               Pourquoi{" "}
               <span className="site-title-accent">
                 10 000+ artisans
               </span>{" "}
               choisissent XOpus
             </h1>
-            <div className="site-tricolor" style={{ margin: "20px auto 24px" }} />
-            <p className="site-lead" style={{ maxWidth: 620, margin: "0 auto" }}>
+            <div className="site-tricolor" className="site-tricolor site-hero-tricolor" />
+            <p className="site-lead" className="site-lead site-hero-lead">
               Les artisans et indépendants méritent un outil de facturation
               simple, fiable et conforme. Pas un logiciel complexe conçu pour
               les grandes entreprises. XOpus est né de cette conviction.
@@ -207,7 +207,7 @@ export default function PourquoiXopusPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Le problème</span>
-              <h2 className="site-section-title" style={{ marginTop: 12 }}>
+              <h2 className="site-section-title" className="site-title site-section-head-mt">
                 La facturation{" "}
                 <span className="site-title-accent">
                   n&apos;est pas votre métier.
@@ -293,7 +293,7 @@ export default function PourquoiXopusPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">La solution</span>
-              <h2 className="site-section-title" style={{ marginTop: 12 }}>
+              <h2 className="site-section-title" className="site-title site-section-head-mt">
                 6 raisons de choisir{" "}
                 <span className="site-title-accent">XOpus.</span>
               </h2>
@@ -375,7 +375,7 @@ export default function PourquoiXopusPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Témoignages</span>
-              <h2 className="site-section-title" style={{ marginTop: 12 }}>
+              <h2 className="site-section-title" className="site-title site-section-head-mt">
                 Ils en parlent{" "}
                 <span className="site-title-accent">mieux que nous.</span>
               </h2>
@@ -462,7 +462,7 @@ export default function PourquoiXopusPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Comparatif</span>
-              <h2 className="site-section-title" style={{ marginTop: 12 }}>
+              <h2 className="site-section-title" className="site-title site-section-head-mt">
                 XOpus vs{" "}
                 <span className="site-title-accent">les autres.</span>
               </h2>
@@ -577,7 +577,7 @@ export default function PourquoiXopusPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Comment ça marche</span>
-              <h2 className="site-section-title" style={{ marginTop: 12 }}>
+              <h2 className="site-section-title" className="site-title site-section-head-mt">
                 Opérationnel en{" "}
                 <span className="site-title-accent">3 minutes.</span>
               </h2>
@@ -665,7 +665,7 @@ export default function PourquoiXopusPage() {
               14 jours gratuits, sans carte bancaire. Résiliation en 1 clic.
               Zéro risque, zéro engagement.
             </p>
-            <div className="site-cta-row" style={{ justifyContent: "center" }}>
+            <div className="site-cta-row site-cta-row-center">
               <AppLink
                 intent="register"
                 className="site-btn site-btn-primary site-btn-lg"

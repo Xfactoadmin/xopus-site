@@ -99,7 +99,7 @@ export default function SiteFooter() {
           {/* Newsletter */}
           <div className="site-footer-newsletter">
             <h4 className="site-footer-links-title">Newsletter</h4>
-            <p style={{ fontSize: 14, marginBottom: 14, lineHeight: 1.6 }}>
+            <p className="site-footer-newsletter-text">
               Recevez nos conseils facturation et les dernières actualités.
             </p>
             <form
@@ -127,7 +127,7 @@ export default function SiteFooter() {
             <span>
               &copy; {new Date().getFullYear()} XOpus. Tous droits réservés.
             </span>
-            <span style={{ opacity: 0.5 }}>·</span>
+            <span className="site-footer-separator">·</span>
             <span>Made in France 🇫🇷</span>
           </div>
           <div className="site-footer-legal">

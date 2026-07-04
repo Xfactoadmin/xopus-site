@@ -166,19 +166,19 @@ export default function AutoEntrepreneurPage() {
   return (
     <>
       <SiteHeader />
-      <main className="site-main" style={{ paddingTop: 100 }}>
+      <main className="site-main" className="site-page-hero">
 
         {/* ===== HERO ===== */}
         <section style={{ textAlign: "center", padding: "0 24px 4rem", maxWidth: 860, margin: "0 auto" }}>
           <Reveal>
             <span className="site-eyebrow">Auto-Entrepreneur</span>
-            <h1 className="site-title" style={{ marginTop: 12 }}>
+            <h1 className="site-title" className="site-title site-section-head-mt">
               Facturation{" "}
               <span className="site-title-accent">auto-entrepreneur</span>{" "}
               simplifiée.
             </h1>
-            <div className="site-tricolor" style={{ margin: "20px auto 24px" }} />
-            <p className="site-lead" style={{ maxWidth: 620, margin: "0 auto" }}>
+            <div className="site-tricolor" className="site-tricolor site-hero-tricolor" />
+            <p className="site-lead" className="site-lead site-hero-lead">
               XOpus est le logiciel de facturation pensé pour les
               auto-entrepreneurs et micro-entreprises. Créez vos factures
               conformes en 2 minutes, sans expertise comptable requise.
@@ -207,9 +207,9 @@ export default function AutoEntrepreneurPage() {
           </Reveal>
 
           <Reveal delay={100}>
-            <div style={{ maxWidth: 740, margin: "0 auto", padding: "0 24px" }}>
+            <div className="site-centered-block">
               <div className="site-card" style={{ padding: 32 }}>
-                <div style={{ fontSize: 15, lineHeight: 1.85, color: "var(--muted)", display: "flex", flexDirection: "column", gap: 16 }}>
+                <div className="site-card-content">
                   <p>
                     Le statut d&apos;auto-entrepreneur — officiellement appelé
                     &quot;micro-entrepreneur&quot; depuis la loi du 18 octobre
@@ -248,7 +248,7 @@ export default function AutoEntrepreneurPage() {
                 Vos obligations de{" "}
                 <span className="site-title-accent">facturation.</span>
               </h2>
-              <p className="site-lead" style={{ maxWidth: 600, margin: "12px auto 0" }}>
+              <p className="site-lead" className="site-lead site-section-head-desc">
                 Même en micro-entreprise, la facturation obéit à des règles
                 strictes. Voici ce que la loi vous impose.
               </p>
@@ -256,17 +256,17 @@ export default function AutoEntrepreneurPage() {
           </Reveal>
 
           <Reveal delay={100}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20, maxWidth: 1040, margin: "0 auto", padding: "0 24px" }}>
+            <div className="site-feature-grid">
               <div className="site-card" style={{ padding: 24 }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(255,0,51,0.08)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
+                <div className="site-card-icon-sm">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF0033" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
                     <line x1="12" y1="9" x2="12" y2="13" />
                     <line x1="12" y1="17" x2="12.01" y2="17" />
                   </svg>
                 </div>
-                <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>Obligation de facturation</h3>
-                <p style={{ fontSize: 14, lineHeight: 1.7, color: "var(--muted)" }}>
+                <h3 className="site-card-heading">Obligation de facturation</h3>
+                <p className="site-card-desc">
                   Toute prestation supérieure à 25 € TTC (1 € pour les ventes
                   de biens) doit faire l&apos;objet d&apos;une facture. Cette obligation
                   concerne les transactions avec des professionnels comme avec
@@ -275,15 +275,15 @@ export default function AutoEntrepreneurPage() {
               </div>
 
               <div className="site-card" style={{ padding: 24 }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(255,0,51,0.08)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
+                <div className="site-card-icon-sm">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF0033" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <circle cx="12" cy="12" r="10" />
                     <line x1="12" y1="8" x2="12" y2="12" />
                     <line x1="12" y1="16" x2="12.01" y2="16" />
                   </svg>
                 </div>
-                <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>Mentions obligatoires</h3>
-                <p style={{ fontSize: 14, lineHeight: 1.7, color: "var(--muted)" }}>
+                <h3 className="site-card-heading">Mentions obligatoires</h3>
+                <p className="site-card-desc">
                   Chaque facture doit comporter : numéro, date, identité du
                   client et du prestataire, SIRET, n° de TVA ou mention de
                   franchise, désignation de la prestation, montant HT et TTC,
@@ -292,13 +292,13 @@ export default function AutoEntrepreneurPage() {
               </div>
 
               <div className="site-card" style={{ padding: 24 }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(255,0,51,0.08)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
+                <div className="site-card-icon-sm">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF0033" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                   </svg>
                 </div>
-                <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>Loi anti-fraude TVA</h3>
-                <p style={{ fontSize: 14, lineHeight: 1.7, color: "var(--muted)" }}>
+                <h3 className="site-card-heading">Loi anti-fraude TVA</h3>
+                <p className="site-card-desc">
                   La loi impose la sécurisation des factures pour lutter
                   contre la fraude. Le Factur-X (PDF + XML) est le format
                   recommandé. Même en franchise de TVA, anticiper cette
@@ -318,7 +318,7 @@ export default function AutoEntrepreneurPage() {
                 Comment XOpus{" "}
                 <span className="site-title-accent">vous aide.</span>
               </h2>
-              <p className="site-lead" style={{ maxWidth: 580, margin: "12px auto 0" }}>
+              <p className="site-lead" className="site-lead site-section-head-desc">
                 XOpus est conçu pour simplifier la vie des auto-entrepreneurs.
                 Pas besoin d&apos;expertise comptable — l&apos;outil s&apos;occupe de tout.
               </p>
@@ -326,14 +326,14 @@ export default function AutoEntrepreneurPage() {
           </Reveal>
 
           <Reveal delay={100}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, maxWidth: 1040, margin: "0 auto", padding: "0 24px" }}>
+            <div className="site-feature-grid-lg">
               {ADVANTAGES.map((a) => (
                 <div key={a.title} className="site-card" style={{ padding: 28 }}>
-                  <div style={{ width: 48, height: 48, borderRadius: 12, background: "rgba(0,85,255,0.08)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
+                  <div className="site-card-icon-blue">
                     {a.icon}
                   </div>
-                  <h3 style={{ fontSize: 17, fontWeight: 600, marginBottom: 8 }}>{a.title}</h3>
-                  <p style={{ fontSize: 14, lineHeight: 1.7, color: "var(--muted)" }}>{a.desc}</p>
+                  <h3 className="site-card-heading-lg">{a.title}</h3>
+                  <p className="site-card-desc">{a.desc}</p>
                 </div>
               ))}
             </div>
@@ -353,9 +353,9 @@ export default function AutoEntrepreneurPage() {
           </Reveal>
 
           <Reveal delay={100}>
-            <div style={{ maxWidth: 740, margin: "0 auto", padding: "0 24px" }}>
+            <div className="site-centered-block">
               <div className="site-card" style={{ padding: 32 }}>
-                <div style={{ fontSize: 15, lineHeight: 1.85, color: "var(--muted)", display: "flex", flexDirection: "column", gap: 16 }}>
+                <div className="site-card-content">
                   <p>
                     La conformité fiscale est un enjeu majeur pour les
                     auto-entrepreneurs. Les erreurs de facturation — mentions
@@ -427,7 +427,7 @@ export default function AutoEntrepreneurPage() {
           </Reveal>
 
           <Reveal delay={100}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, maxWidth: 1040, margin: "0 auto", padding: "0 24px" }}>
+            <div className="site-feature-grid-lg">
               {TESTIMONIALS.map((t) => (
                 <div key={t.name} className="site-card" style={{ padding: 28, display: "flex", flexDirection: "column" }}>
                   <div style={{ display: "flex", gap: 2, marginBottom: 12 }}>
@@ -477,13 +477,13 @@ export default function AutoEntrepreneurPage() {
         {/* ===== TEXTE SEO LONG ===== */}
         <section className="site-section">
           <Reveal>
-            <div style={{ maxWidth: 740, margin: "0 auto", padding: "0 24px" }}>
+            <div className="site-centered-block">
               <h2 className="site-section-title" style={{ textAlign: "center", marginBottom: 24 }}>
                 Pourquoi{" "}
                 <span className="site-title-accent">XOpus</span>{" "}
                 est le meilleur choix pour les auto-entrepreneurs
               </h2>
-              <div style={{ fontSize: 15, lineHeight: 1.85, color: "var(--muted)", display: "flex", flexDirection: "column", gap: 16 }}>
+              <div className="site-card-content">
                 <p>
                   L&apos;auto-entrepreneur fait face à un paradoxe : il bénéficie
                   d&apos;un statut simplifié, mais ses obligations de facturation
@@ -529,7 +529,7 @@ export default function AutoEntrepreneurPage() {
               14 jours gratuits, sans carte bancaire. Rejoignez des milliers
               d&apos;auto-entrepreneurs qui facturent malin avec XOpus.
             </p>
-            <div className="site-cta-row" style={{ justifyContent: "center" }}>
+            <div className="site-cta-row site-cta-row-center">
               <AppLink intent="register" className="site-btn site-btn-primary site-btn-lg">
                 Commencer gratuitement
               </AppLink>

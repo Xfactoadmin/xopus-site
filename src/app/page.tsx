@@ -256,7 +256,7 @@ export default function HomePage() {
                 </span>
               </Reveal>
 
-              <h1 className="site-title" style={{ marginTop: 20 }}>
+              <h1 className="site-title site-hero-copy-mt">
                 Facturez comme
                 <br />
                 <span className="site-title-accent">un pro.</span>
@@ -324,10 +324,7 @@ export default function HomePage() {
                   <strong>654,00 €</strong>
                 </div>
                 <div className="site-mockup-pay">
-                  <span
-                    className="site-btn site-btn-primary"
-                    style={{ fontSize: 13, padding: "10px 24px" }}
-                  >
+                  <span className="site-btn site-btn-primary site-mockup-btn">
                     Payer maintenant
                   </span>
                 </div>
@@ -432,17 +429,14 @@ export default function HomePage() {
                 <span className="site-badge-dot" />
                 Offre de lancement
               </span>
-              <div className="site-price" style={{ marginTop: 20 }}>
+              <div className="site-price site-mt-20">
                 <span className="site-price-old">19,99 €</span>
                 9,99 €
               </div>
-              <p style={{ color: "var(--muted)", fontSize: 15, marginTop: 8 }}>
+              <p className="site-promo-subtitle">
                 /mois · tout inclus · sans engagement
               </p>
-              <div
-                className="site-cta-row"
-                style={{ justifyContent: "center", marginTop: 28 }}
-              >
+              <div className="site-cta-row site-cta-row-center-mt">
                 <AppLink
                   intent="register"
                   className="site-btn site-btn-primary site-btn-lg"
@@ -466,14 +460,11 @@ export default function HomePage() {
             </div>
           </Reveal>
 
-          <div
-            className="site-grid"
-            style={{ gridTemplateColumns: "repeat(3, 1fr)" }}
-          >
+          <div className="site-grid site-testimonial-grid">
             {TESTIMONIALS.map((t, i) => (
               <Reveal key={t.name} delay={i * 100}>
                 <div className="site-testimonial site-glass">
-                  <div className="site-stars" style={{ marginBottom: 12 }}>
+                  <div className="site-stars site-stars-mb">
                     {[...Array(5)].map((_, j) => (
                       <svg
                         key={j}
@@ -487,15 +478,7 @@ export default function HomePage() {
                       </svg>
                     ))}
                   </div>
-                  <p
-                    style={{
-                      fontSize: 14.5,
-                      lineHeight: 1.7,
-                      color: "var(--muted)",
-                    }}
-                  >
-                    {t.text}
-                  </p>
+                  <p className="site-testimonial-text">{t.text}</p>
                   <div className="site-testimonial-author">
                     <div className="site-testimonial-avatar">
                       {t.name.charAt(0)}
@@ -576,7 +559,7 @@ export default function HomePage() {
               Rejoignez les milliers d'artisans et indépendants qui font
               confiance à XOpus. Essai gratuit de 14 jours, sans carte bancaire.
             </p>
-            <div className="site-cta-row" style={{ justifyContent: "center" }}>
+            <div className="site-cta-row site-cta-row-center-mt">
               <AppLink
                 intent="register"
                 className="site-btn site-btn-primary site-btn-lg"

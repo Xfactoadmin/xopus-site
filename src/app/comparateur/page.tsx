@@ -403,7 +403,7 @@ export default function ComparateurPage() {
   return (
     <>
       <SiteHeader />
-      <main className="site-main" style={{ paddingTop: 100 }}>
+      <main className="site-main" className="site-page-hero">
         {/* ===== HERO ===== */}
         <section
           style={{
@@ -415,17 +415,17 @@ export default function ComparateurPage() {
         >
           <Reveal>
             <span className="site-eyebrow">Comparateur 2026</span>
-            <h1 className="site-title" style={{ marginTop: 12 }}>
+            <h1 className="site-title" className="site-title site-section-head-mt">
               XOpus vs{" "}
               <span className="site-title-accent">la concurrence.</span>
             </h1>
             <div
               className="site-tricolor"
-              style={{ margin: "20px auto 24px" }}
+              className="site-tricolor site-hero-tricolor"
             />
             <p
               className="site-lead"
-              style={{ maxWidth: 620, margin: "0 auto" }}
+              className="site-lead site-hero-lead"
             >
               Comparez XOpus avec les 8 autres logiciels de facturation les plus
               utilisés en France. Prix, fonctionnalités, conformité : tout est
@@ -517,7 +517,7 @@ export default function ComparateurPage() {
               </h2>
               <p
                 className="site-lead"
-                style={{ maxWidth: 600, margin: "12px auto 0" }}
+                className="site-lead site-section-head-desc"
               >
                 Le prix affiché n&apos;est pas toujours le prix réel. Découvrez
                 les suppléments que d&apos;autres logiciels facturent en plus de
@@ -623,7 +623,7 @@ export default function ComparateurPage() {
                 border: "1px solid rgba(0,85,255,0.2)",
               }}
             >
-              <p style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>
+              <p className="site-card-heading">
                 <span style={{ color: "#0055FF" }}>XOpus</span> — 9,99 €/mois,
                 tout inclus, sans surprise.
               </p>
@@ -680,7 +680,7 @@ export default function ComparateurPage() {
                     {r.icon}
                   </div>
                   <h3
-                    style={{ fontSize: 17, fontWeight: 600, marginBottom: 8 }}
+                    className="site-card-heading-lg"
                   >
                     {r.title}
                   </h3>
@@ -702,7 +702,7 @@ export default function ComparateurPage() {
         {/* ===== TEXTE SEO LONG ===== */}
         <section className="site-section">
           <Reveal>
-            <div style={{ maxWidth: 740, margin: "0 auto", padding: "0 24px" }}>
+            <div className="site-centered-block">
               <h2
                 className="site-section-title"
                 style={{ textAlign: "center", marginBottom: 24 }}
@@ -775,7 +775,7 @@ export default function ComparateurPage() {
               Rejoignez XOpus et profitez du meilleur rapport qualité/prix du
               marché. 14 jours gratuits, sans carte bancaire.
             </p>
-            <div className="site-cta-row" style={{ justifyContent: "center" }}>
+            <div className="site-cta-row site-cta-row-center">
               <AppLink
                 intent="register"
                 className="site-btn site-btn-primary site-btn-lg"
