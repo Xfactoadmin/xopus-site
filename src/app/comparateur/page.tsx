@@ -403,7 +403,7 @@ export default function ComparateurPage() {
   return (
     <>
       <SiteHeader />
-      <main className="site-main" className="site-page-hero">
+      <main className="site-main site-page-hero">
         {/* ===== HERO ===== */}
         <section
           style={{
@@ -415,18 +415,12 @@ export default function ComparateurPage() {
         >
           <Reveal>
             <span className="site-eyebrow">Comparateur 2026</span>
-            <h1 className="site-title" className="site-title site-section-head-mt">
+            <h1 className="site-title site-section-head-mt">
               XOpus vs{" "}
               <span className="site-title-accent">la concurrence.</span>
             </h1>
-            <div
-              className="site-tricolor"
-              className="site-tricolor site-hero-tricolor"
-            />
-            <p
-              className="site-lead"
-              className="site-lead site-hero-lead"
-            >
+            <div className="site-tricolor site-hero-tricolor" />
+            <p className="site-lead site-hero-lead">
               Comparez XOpus avec les 8 autres logiciels de facturation les plus
               utilisés en France. Prix, fonctionnalités, conformité : tout est
               passé au crible pour vous aider à faire le bon choix.
@@ -515,10 +509,7 @@ export default function ComparateurPage() {
                   cachés des concurrents.
                 </span>
               </h2>
-              <p
-                className="site-lead"
-                className="site-lead site-section-head-desc"
-              >
+              <p className="site-lead site-section-head-desc">
                 Le prix affiché n&apos;est pas toujours le prix réel. Découvrez
                 les suppléments que d&apos;autres logiciels facturent en plus de
                 leur forfait de base.
@@ -679,11 +670,7 @@ export default function ComparateurPage() {
                   >
                     {r.icon}
                   </div>
-                  <h3
-                    className="site-card-heading-lg"
-                  >
-                    {r.title}
-                  </h3>
+                  <h3 className="site-card-heading-lg">{r.title}</h3>
                   <p
                     style={{
                       fontSize: 14,

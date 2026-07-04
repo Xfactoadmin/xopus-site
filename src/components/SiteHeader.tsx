@@ -56,7 +56,6 @@ export default function SiteHeader() {
           <div className="site-header-actions">
             <Link
               href="https://app.xopus.fr/register"
-              className="site-btn site-btn-primary"
               className="site-btn site-btn-primary site-header-cta"
             >
               Essai gratuit 14 jours
@@ -103,7 +102,6 @@ export default function SiteHeader() {
           <div className="site-mobile-actions">
             <Link
               href="https://app.xopus.fr/register"
-              className="site-btn site-btn-primary"
               className="site-btn site-btn-primary site-header-mobile-cta"
               onClick={() => setMenuOpen(false)}
             >

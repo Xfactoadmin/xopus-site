@@ -60,20 +60,30 @@ export default function ConformitePage() {
   return (
     <>
       <SiteHeader />
-      <main className="site-main" className="site-page-hero">
+      <main className="site-main site-page-hero">
         {/* Hero */}
-        <section style={{ textAlign: "center", padding: "0 24px 4rem", maxWidth: 800, margin: "0 auto" }}>
+        <section
+          style={{
+            textAlign: "center",
+            padding: "0 24px 4rem",
+            maxWidth: 800,
+            margin: "0 auto",
+          }}
+        >
           <Reveal>
             <span className="site-eyebrow">Conformité</span>
-            <h1 className="site-title" className="site-title site-section-head-mt">
+            <h1 className="site-title site-section-head-mt">
               Conforme à la{" "}
               <span className="site-title-accent">loi anti-fraude TVA.</span>
             </h1>
-            <div className="site-tricolor" className="site-tricolor site-hero-tricolor" />
-            <p className="site-lead" style={{ maxWidth: 600, margin: "0 auto" }}>
+            <div className="site-tricolor site-hero-tricolor" />
+            <p
+              className="site-lead"
+              style={{ maxWidth: 600, margin: "0 auto" }}
+            >
               XOpus est un logiciel de facturation certifié conforme à la loi
-              anti-fraude TVA française. Chaque facture est sécurisée,
-              horodatée et intègre.
+              anti-fraude TVA française. Chaque facture est sécurisée, horodatée
+              et intègre.
             </p>
           </Reveal>
         </section>
@@ -136,10 +146,16 @@ export default function ConformitePage() {
               concentrez sur votre métier, on s'occupe du reste.
             </p>
             <div className="site-cta-row site-cta-row-center">
-              <AppLink intent="register" className="site-btn site-btn-primary site-btn-lg">
+              <AppLink
+                intent="register"
+                className="site-btn site-btn-primary site-btn-lg"
+              >
                 Essai gratuit 14 jours
               </AppLink>
-              <Link href="/contact" className="site-btn site-btn-ghost site-btn-lg">
+              <Link
+                href="/contact"
+                className="site-btn site-btn-ghost site-btn-lg"
+              >
                 Nous contacter
               </Link>
             </div>

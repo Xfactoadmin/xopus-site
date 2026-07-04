@@ -198,7 +198,7 @@ export default function SecuriteRgpdPage() {
   return (
     <>
       <SiteHeader />
-      <main className="site-main" className="site-page-hero">
+      <main className="site-main site-page-hero">
         {/* Hero */}
         <section
           style={{
@@ -210,18 +210,12 @@ export default function SecuriteRgpdPage() {
         >
           <Reveal>
             <span className="site-eyebrow">Sécurité & RGPD</span>
-            <h1 className="site-title" className="site-title site-section-head-mt">
+            <h1 className="site-title site-section-head-mt">
               Votre sécurité,{" "}
               <span className="site-title-accent">notre priorité.</span>
             </h1>
-            <div
-              className="site-tricolor"
-              className="site-tricolor site-hero-tricolor"
-            />
-            <p
-              className="site-lead"
-              className="site-lead site-hero-lead"
-            >
+            <div className="site-tricolor site-hero-tricolor" />
+            <p className="site-lead site-hero-lead">
               Les données de vos clients et de votre activité sont précieuses.
               XOpus les protège avec les standards de sécurité les plus élevés
               du secteur, hébergés exclusivement en France.
@@ -305,7 +299,9 @@ export default function SecuriteRgpdPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Nos engagements</span>
-              <h2 className="site-section-title" className="site-title site-section-head-mt">
+              <h2
+                className="site-section-title site-title site-section-head-mt"
+              >
                 6 piliers de{" "}
                 <span className="site-title-accent">sécurité.</span>
               </h2>
@@ -390,7 +386,9 @@ export default function SecuriteRgpdPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">RGPD</span>
-              <h2 className="site-section-title" className="site-title site-section-head-mt">
+              <h2
+                className="site-section-title site-title site-section-head-mt"
+              >
                 Vos données,{" "}
                 <span className="site-title-accent">vos droits.</span>
               </h2>
@@ -475,7 +473,9 @@ export default function SecuriteRgpdPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Questions sécurité</span>
-              <h2 className="site-section-title" className="site-title site-section-head-mt">
+              <h2
+                className="site-section-title site-title site-section-head-mt"
+              >
                 Sécurité,
                 <br />
                 <span className="site-title-accent">
@@ -532,7 +532,9 @@ export default function SecuriteRgpdPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Transparence</span>
-              <h2 className="site-section-title" className="site-title site-section-head-mt">
+              <h2
+                className="site-section-title site-title site-section-head-mt"
+              >
                 Nous croyons en la{" "}
                 <span className="site-title-accent">transparence totale.</span>
               </h2>

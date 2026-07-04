@@ -38,7 +38,17 @@ export const metadata: Metadata = {
 const REASONS = [
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0055FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#0055FF"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
         <polyline points="14 2 14 8 20 8" />
         <line x1="16" y1="13" x2="8" y2="13" />
@@ -51,7 +61,17 @@ const REASONS = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0055FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#0055FF"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
         <path d="M7 11V7a5 5 0 0 1 10 0v4" />
       </svg>
@@ -61,7 +81,17 @@ const REASONS = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0055FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#0055FF"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <line x1="12" y1="1" x2="12" y2="23" />
         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
       </svg>
@@ -71,7 +101,17 @@ const REASONS = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0055FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#0055FF"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
@@ -80,7 +120,17 @@ const REASONS = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0055FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#0055FF"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <circle cx="12" cy="12" r="10" />
         <path d="M12 16v-4" />
         <path d="M12 8h.01" />
@@ -91,7 +141,17 @@ const REASONS = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0055FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#0055FF"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
         <circle cx="12" cy="12" r="3" />
       </svg>
@@ -130,7 +190,7 @@ export default function PourquoiXopusPage() {
   return (
     <>
       <SiteHeader />
-      <main className="site-main" className="site-page-hero">
+      <main className="site-main site-page-hero">
         {/* Hero */}
         <section
           style={{
@@ -142,15 +202,13 @@ export default function PourquoiXopusPage() {
         >
           <Reveal>
             <span className="site-eyebrow">Pourquoi XOpus</span>
-            <h1 className="site-title" className="site-title site-section-head-mt">
+            <h1 className="site-title site-section-head-mt">
               Pourquoi{" "}
-              <span className="site-title-accent">
-                10 000+ artisans
-              </span>{" "}
+              <span className="site-title-accent">10 000+ artisans</span>{" "}
               choisissent XOpus
             </h1>
-            <div className="site-tricolor" className="site-tricolor site-hero-tricolor" />
-            <p className="site-lead" className="site-lead site-hero-lead">
+            <div className="site-tricolor site-hero-tricolor" />
+            <p className="site-lead site-hero-lead">
               Les artisans et indépendants méritent un outil de facturation
               simple, fiable et conforme. Pas un logiciel complexe conçu pour
               les grandes entreprises. XOpus est né de cette conviction.
@@ -207,7 +265,9 @@ export default function PourquoiXopusPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Le problème</span>
-              <h2 className="site-section-title" className="site-title site-section-head-mt">
+              <h2
+                className="site-section-title site-title site-section-head-mt"
+              >
                 La facturation{" "}
                 <span className="site-title-accent">
                   n&apos;est pas votre métier.
@@ -222,10 +282,9 @@ export default function PourquoiXopusPage() {
                 }}
               >
                 Vous êtes artisans, plombiers, électriciens, consultants,
-                développeurs, photographes. Vous savez faire votre métier.
-                Mais la paperasse ? Les factures ? La conformité TVA ? Les
-                relances ? Tout ça, vous n&apos;avez pas le temps de vous en
-                occuper.
+                développeurs, photographes. Vous savez faire votre métier. Mais
+                la paperasse ? Les factures ? La conformité TVA ? Les relances ?
+                Tout ça, vous n&apos;avez pas le temps de vous en occuper.
               </p>
             </div>
           </Reveal>
@@ -293,7 +352,9 @@ export default function PourquoiXopusPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">La solution</span>
-              <h2 className="site-section-title" className="site-title site-section-head-mt">
+              <h2
+                className="site-section-title site-title site-section-head-mt"
+              >
                 6 raisons de choisir{" "}
                 <span className="site-title-accent">XOpus.</span>
               </h2>
@@ -305,8 +366,8 @@ export default function PourquoiXopusPage() {
                   textAlign: "center",
                 }}
               >
-                XOpus a été conçu pour résoudre exactement ces problèmes.
-                Voici ce qui fait la différence.
+                XOpus a été conçu pour résoudre exactement ces problèmes. Voici
+                ce qui fait la différence.
               </p>
             </div>
           </Reveal>
@@ -375,7 +436,9 @@ export default function PourquoiXopusPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Témoignages</span>
-              <h2 className="site-section-title" className="site-title site-section-head-mt">
+              <h2
+                className="site-section-title site-title site-section-head-mt"
+              >
                 Ils en parlent{" "}
                 <span className="site-title-accent">mieux que nous.</span>
               </h2>
@@ -420,8 +483,7 @@ export default function PourquoiXopusPage() {
                         width: 40,
                         height: 40,
                         borderRadius: "50%",
-                        background:
-                          "linear-gradient(135deg, #0055FF, #0033CC)",
+                        background: "linear-gradient(135deg, #0055FF, #0033CC)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -462,14 +524,21 @@ export default function PourquoiXopusPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Comparatif</span>
-              <h2 className="site-section-title" className="site-title site-section-head-mt">
-                XOpus vs{" "}
-                <span className="site-title-accent">les autres.</span>
+              <h2
+                className="site-section-title site-title site-section-head-mt"
+              >
+                XOpus vs <span className="site-title-accent">les autres.</span>
               </h2>
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <div style={{ maxWidth: 700, margin: "3rem auto 0", overflowX: "auto" }}>
+            <div
+              style={{
+                maxWidth: 700,
+                margin: "3rem auto 0",
+                overflowX: "auto",
+              }}
+            >
               <table
                 style={{
                   width: "100%",
@@ -516,14 +585,46 @@ export default function PourquoiXopusPage() {
                 </thead>
                 <tbody>
                   {[
-                    { critere: "Tarif mensuel", xopus: "9,99 €", autre: "15-50 €" },
-                    { critere: "Essai gratuit", xopus: "14 jours", autre: "7-30 jours" },
-                    { critere: "Factur-X automatique", xopus: "✓", autre: "✗ / payant" },
-                    { critere: "Paiements en ligne", xopus: "✓ Inclus", autre: "Modules payants" },
-                    { critere: "Hébergement France", xopus: "✓", autre: "Souvent non" },
-                    { critere: "Support en français", xopus: "✓ Réactif", autre: "Variable" },
-                    { critere: "Frais cachés", xopus: "Aucun", autre: "Fréquents" },
-                    { critere: "Conformité anti-fraude", xopus: "✓ Automatique", autre: "Partielle" },
+                    {
+                      critere: "Tarif mensuel",
+                      xopus: "9,99 €",
+                      autre: "15-50 €",
+                    },
+                    {
+                      critere: "Essai gratuit",
+                      xopus: "14 jours",
+                      autre: "7-30 jours",
+                    },
+                    {
+                      critere: "Factur-X automatique",
+                      xopus: "✓",
+                      autre: "✗ / payant",
+                    },
+                    {
+                      critere: "Paiements en ligne",
+                      xopus: "✓ Inclus",
+                      autre: "Modules payants",
+                    },
+                    {
+                      critere: "Hébergement France",
+                      xopus: "✓",
+                      autre: "Souvent non",
+                    },
+                    {
+                      critere: "Support en français",
+                      xopus: "✓ Réactif",
+                      autre: "Variable",
+                    },
+                    {
+                      critere: "Frais cachés",
+                      xopus: "Aucun",
+                      autre: "Fréquents",
+                    },
+                    {
+                      critere: "Conformité anti-fraude",
+                      xopus: "✓ Automatique",
+                      autre: "Partielle",
+                    },
                   ].map((row, i) => (
                     <tr
                       key={row.critere}
@@ -577,7 +678,9 @@ export default function PourquoiXopusPage() {
           <Reveal>
             <div className="site-section-head site-section-head--centered">
               <span className="site-eyebrow">Comment ça marche</span>
-              <h2 className="site-section-title" className="site-title site-section-head-mt">
+              <h2
+                className="site-section-title site-title site-section-head-mt"
+              >
                 Opérationnel en{" "}
                 <span className="site-title-accent">3 minutes.</span>
               </h2>
@@ -619,8 +722,7 @@ export default function PourquoiXopusPage() {
                       width: 48,
                       height: 48,
                       borderRadius: "50%",
-                      background:
-                        "linear-gradient(135deg, #0055FF, #0033CC)",
+                      background: "linear-gradient(135deg, #0055FF, #0033CC)",
                       color: "#fff",
                       fontWeight: 800,
                       fontSize: 20,
