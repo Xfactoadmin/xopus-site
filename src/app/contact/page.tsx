@@ -8,16 +8,17 @@ export default function ContactPage() {
   return (
     <>
       <SiteHeader />
-      <main className="site-main site-page-hero">
+      <main className="site-main" style={{ paddingTop: 100 }}>
         {/* Hero */}
-        <section className="site-hero-page">
+        <section style={{ textAlign: "center", padding: "0 24px 4rem", maxWidth: 800, margin: "0 auto" }}>
           <Reveal>
             <span className="site-eyebrow">Contact</span>
-            <h1 className="site-title site-section-head-mt">
-              On en <span className="site-title-accent">parle ?</span>
+            <h1 className="site-title" style={{ marginTop: 12 }}>
+              On en{" "}
+              <span className="site-title-accent">parle ?</span>
             </h1>
-            <div className="site-tricolor site-hero-tricolor" />
-            <p className="site-lead site-hero-lead">
+            <div className="site-tricolor" style={{ margin: "20px auto 24px" }} />
+            <p className="site-lead" style={{ maxWidth: 560, margin: "0 auto" }}>
               Une question, une démo ou simplement envie d'en savoir plus ?
               Notre équipe vous répond sous 24h.
             </p>
@@ -26,10 +27,7 @@ export default function ContactPage() {
 
         {/* Form */}
         <Reveal>
-          <form
-            className="site-form"
-            onSubmit={(e: React.FormEvent) => e.preventDefault()}
-          >
+          <form className="site-form" onSubmit={(e: React.FormEvent) => e.preventDefault()}>
             <div className="site-form-group">
               <label className="site-form-label" htmlFor="name">
                 Nom
@@ -77,11 +75,8 @@ export default function ContactPage() {
                 required
               />
             </div>
-            <div className="site-form-submit">
-              <button
-                type="submit"
-                className="site-btn site-btn-primary site-btn-lg"
-              >
+            <div style={{ textAlign: "center", marginTop: 28 }}>
+              <button type="submit" className="site-btn site-btn-primary site-btn-lg">
                 Envoyer le message
               </button>
             </div>
@@ -92,37 +87,24 @@ export default function ContactPage() {
         <section className="site-section">
           <Reveal>
             <div className="site-section-head site-section-head--centered">
-              <h2 className="site-section-title site-section-title-sm">
+              <h2 className="site-section-title" style={{ fontSize: "clamp(22px, 3vw, 30px)" }}>
                 Autres moyens de nous contacter
               </h2>
             </div>
           </Reveal>
 
-          <div className="site-grid site-grid-3-fixed">
+          <div className="site-grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", maxWidth: 800 }}>
             <Reveal delay={0}>
-              <div className="site-card site-glass site-card-centered">
-                <div className="site-card-icon site-card-icon-centered">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden
-                  >
+              <div className="site-card site-glass" style={{ textAlign: "center" }}>
+                <div className="site-card-icon" style={{ margin: "0 auto 16px" }}>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
                 </div>
-                <h3 className="site-card-heading-sm">Email</h3>
-                <p className="site-card-body">
-                  <a
-                    href="mailto:support@xopus.fr"
-                    className="site-contact-link"
-                  >
+                <h3 style={{ fontSize: 16 }}>Email</h3>
+                <p style={{ fontSize: 14 }}>
+                  <a href="mailto:support@xopus.fr" style={{ color: "var(--bleu)", fontWeight: 700 }}>
                     support@xopus.fr
                   </a>
                 </p>
@@ -130,49 +112,29 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal delay={80}>
-              <div className="site-card site-glass site-card-centered">
-                <div className="site-card-icon site-card-icon-centered">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden
-                  >
+              <div className="site-card site-glass" style={{ textAlign: "center" }}>
+                <div className="site-card-icon" style={{ margin: "0 auto 16px" }}>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                   </svg>
                 </div>
-                <h3 className="site-card-heading-sm">Chat en direct</h3>
-                <p className="site-card-body">
+                <h3 style={{ fontSize: 16 }}>Chat en direct</h3>
+                <p style={{ fontSize: 14 }}>
                   Disponible du lundi au vendredi, 9h-18h.
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={160}>
-              <div className="site-card site-glass site-card-centered">
-                <div className="site-card-icon site-card-icon-centered">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden
-                  >
+              <div className="site-card site-glass" style={{ textAlign: "center" }}>
+                <div className="site-card-icon" style={{ margin: "0 auto 16px" }}>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <circle cx="12" cy="12" r="10" />
                     <polyline points="12 6 12 12 16 14" />
                   </svg>
                 </div>
-                <h3 className="site-card-heading-sm">Temps de réponse</h3>
-                <p className="site-card-body">
+                <h3 style={{ fontSize: 16 }}>Temps de réponse</h3>
+                <p style={{ fontSize: 14 }}>
                   Sous 24h en moyenne. Urgences : contactez-nous par chat.
                 </p>
               </div>

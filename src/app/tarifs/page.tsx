@@ -143,7 +143,7 @@ export default function TarifsPage() {
   return (
     <>
       <SiteHeader />
-      <main className="site-main site-page-hero">
+      <main className="site-main" style={{ paddingTop: 100 }}>
         {/* ===== HERO ===== */}
         <section
           style={{
@@ -155,12 +155,18 @@ export default function TarifsPage() {
         >
           <Reveal>
             <span className="site-eyebrow">Tarifs</span>
-            <h1 className="site-title site-section-head-mt">
+            <h1 className="site-title" style={{ marginTop: 12 }}>
               Un tarif{" "}
               <span className="site-title-accent">simple, tout inclus.</span>
             </h1>
-            <div className="site-tricolor site-hero-tricolor" />
-            <p className="site-lead site-hero-lead">
+            <div
+              className="site-tricolor"
+              style={{ margin: "20px auto 24px" }}
+            />
+            <p
+              className="site-lead"
+              style={{ maxWidth: 620, margin: "0 auto" }}
+            >
               Pas de frais cachés, pas de commission sur les paiements.
               Choisissez le plan qui correspond à votre activité et commencez à
               facturer en quelques minutes.
@@ -184,7 +190,7 @@ export default function TarifsPage() {
             {/* --- Essai gratuit --- */}
             <Reveal delay={0}>
               <div className="site-pricing-card">
-                <span className="site-eyebrow site-pricing-label">
+                <span className="site-eyebrow" style={{ marginBottom: 8 }}>
                   Essai gratuit
                 </span>
                 <div className="site-pricing-card__price">0 €</div>
@@ -231,10 +237,11 @@ export default function TarifsPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="site-pricing-cta">
+                <div style={{ marginTop: 24 }}>
                   <AppLink
                     intent="register"
-                    className="site-btn site-btn-ghost site-pricing-cta-btn"
+                    className="site-btn site-btn-ghost"
+                    style={{ width: "100%", justifyContent: "center" }}
                   >
                     Commencer gratuitement
                   </AppLink>
@@ -245,7 +252,10 @@ export default function TarifsPage() {
             {/* --- Pro --- */}
             <Reveal delay={100}>
               <div className="site-pricing-card site-pricing-card--highlighted">
-                <span className="site-badge-pulse site-pricing-card-label">
+                <span
+                  className="site-badge-pulse"
+                  style={{ alignSelf: "flex-start", marginBottom: 8 }}
+                >
                   <span className="site-badge-dot" />
                   Populaire
                 </span>
@@ -293,10 +303,11 @@ export default function TarifsPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="site-pricing-cta">
+                <div style={{ marginTop: 24 }}>
                   <AppLink
                     intent="register"
-                    className="site-btn site-btn-primary site-pricing-cta-btn"
+                    className="site-btn site-btn-primary"
+                    style={{ width: "100%", justifyContent: "center" }}
                   >
                     Essai gratuit 14 jours
                   </AppLink>
@@ -307,7 +318,7 @@ export default function TarifsPage() {
             {/* --- Business --- */}
             <Reveal delay={200}>
               <div className="site-pricing-card">
-                <span className="site-eyebrow site-pricing-label">
+                <span className="site-eyebrow" style={{ marginBottom: 8 }}>
                   Business
                 </span>
                 <div className="site-pricing-card__price">29,99 €</div>
@@ -354,10 +365,11 @@ export default function TarifsPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="site-pricing-cta">
+                <div style={{ marginTop: 24 }}>
                   <AppLink
                     intent="register"
-                    className="site-btn site-btn-ghost site-pricing-cta-btn"
+                    className="site-btn site-btn-ghost"
+                    style={{ width: "100%", justifyContent: "center" }}
                   >
                     Contacter l&apos;équipe
                   </AppLink>
@@ -376,7 +388,10 @@ export default function TarifsPage() {
                 Comparez chaque{" "}
                 <span className="site-title-accent">fonctionnalité.</span>
               </h2>
-              <p className="site-lead site-compare-subtitle">
+              <p
+                className="site-lead"
+                style={{ maxWidth: 560, margin: "12px auto 0" }}
+              >
                 Visualisez ce que chaque plan inclut pour choisir celui qui
                 correspond exactement à vos besoins.
               </p>
@@ -419,8 +434,8 @@ export default function TarifsPage() {
 
         {/* ===== CTA intermédiaire ===== */}
         <Reveal>
-          <div className="site-center-block">
-            <p className="site-center-heading">
+          <div style={{ textAlign: "center", padding: "3rem 24px" }}>
+            <p style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>
               Encore des questions sur les tarifs ?
             </p>
             <p
@@ -526,8 +541,8 @@ export default function TarifsPage() {
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="site-centered-block-lg">
-              <div className="site-why-xopus-grid">
+            <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 24px" }}>
+              <div style={{ display: "grid", gap: 24 }}>
                 <div
                   className="site-card"
                   style={{
@@ -710,7 +725,7 @@ export default function TarifsPage() {
               14 jours gratuits, sans carte bancaire. Découvrez XOpus en toute
               sérénité.
             </p>
-            <div className="site-cta-row site-cta-row-center">
+            <div className="site-cta-row" style={{ justifyContent: "center" }}>
               <AppLink
                 intent="register"
                 className="site-btn site-btn-primary site-btn-lg"

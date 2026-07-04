@@ -115,7 +115,7 @@ export default function MentionsLegalesPage() {
                 Le site <strong>xopus.fr</strong> est hébergé par :
               </p>
 
-              <div className="site-legal-provider">
+              <div style={{ marginBottom: 24 }}>
                 <p>
                   <strong>Nom de domaine :</strong>
                   <br />
@@ -136,7 +136,7 @@ export default function MentionsLegalesPage() {
                 </p>
               </div>
 
-              <div className="site-legal-provider">
+              <div style={{ marginBottom: 24 }}>
                 <p>
                   <strong>Infrastructure technique et serveurs :</strong>
                   <br />
@@ -368,14 +368,15 @@ export default function MentionsLegalesPage() {
           <div className="site-legal-divider" />
 
           <Reveal>
-            <div className="site-legal-cta">
-              <p className="site-legal-intro-text">
+            <div style={{ textAlign: "center" }}>
+              <p style={{ fontSize: 15, marginBottom: 24 }}>
                 Pour toute question concernant ces mentions légales, vous pouvez
                 nous contacter :
               </p>
               <a
                 href="mailto:contact@xopus.fr"
-                className="site-btn site-btn-primary site-btn-inline"
+                className="site-btn site-btn-primary"
+                style={{ display: "inline-flex" }}
               >
                 Nous contacter
               </a>

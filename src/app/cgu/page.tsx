@@ -46,7 +46,7 @@ export default function CGUPage() {
           </Reveal>
 
           <Reveal>
-            <p className="site-legal-intro">
+            <p style={{ fontSize: 18, marginBottom: 40 }}>
               Les présentes Conditions Générales d'Utilisation (CGU) déterminent
               les règles d'accès et de bonne utilisation du logiciel{" "}
               <strong>XOpus</strong>, édit par <strong>Fox Repair</strong>,
@@ -607,11 +607,18 @@ export default function CGUPage() {
           <div className="site-legal-divider" />
 
           <Reveal>
-            <div className="site-legal-cta">
-              <p className="site-legal-cta-text">
+            <div style={{ textAlign: "center" }}>
+              <p style={{ fontSize: 16, marginBottom: 24 }}>
                 Pour toute question concernant nos Conditions Générales d'Utilisation :
               </p>
-              <div className="site-legal-cta-btns">
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: 16,
+                  flexWrap: "wrap",
+                }}
+              >
                 <a
                   href="mailto:support@xopus.fr"
                   className="site-btn site-btn-primary"
