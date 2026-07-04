@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import AppLink from "@/components/AppLink";
+
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import HeroBackground from "@/components/HeroBackground";
@@ -159,7 +159,7 @@ const STEPS = [
 
 const PROOF = [
   { value: "9,99 €", label: "Tout inclus · par mois" },
-  { value: "14 jours", label: "D'essai gratuit" },
+  { value: "2 min", label: "Pour facturer" },
   { value: "Factur-X", label: "E-facture 2026 prête" },
   { value: "100 %", label: "Français 🇫🇷" },
 ] as const;
@@ -221,7 +221,7 @@ const FAQ_JSON_LD = {
       name: "Combien coûte XOpus ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "XOpus coûte 9,99€/mois tout inclus. Essai gratuit de 14 jours, sans engagement et sans carte bancaire.",
+        text: "XOpus coûte 9,99€/mois tout inclus, sans engagement.",
       },
     },
     {
@@ -272,12 +272,12 @@ export default function HomePage() {
               </p>
 
               <div className="site-hero-cta-group">
-                <AppLink
-                  intent="register"
+                <Link
                   className="site-btn site-btn-primary site-btn-lg"
+                  href="https://app.xopus.fr"
                 >
                   Accéder à l'application
-                </AppLink>
+                </Link>
                 <Link
                   href="/fonctionnalites"
                   className="site-btn site-btn-ghost site-btn-lg"
@@ -443,12 +443,12 @@ export default function HomePage() {
                 className="site-cta-row"
                 style={{ justifyContent: "center", marginTop: 28 }}
               >
-                <AppLink
-                  intent="register"
+                <Link
+                  href="https://app.xopus.fr"
                   className="site-btn site-btn-primary site-btn-lg"
                 >
                   Commencer maintenant
-                </AppLink>
+                </Link>
               </div>
             </div>
           </Reveal>
@@ -537,10 +537,7 @@ export default function HomePage() {
               </details>
               <details>
                 <summary>Combien coûte XOpus ?</summary>
-                <p>
-                  XOpus coûte 9,99 €/mois tout inclus. Essai gratuit de 14
-                  jours, sans engagement et sans carte bancaire.
-                </p>
+                <p>XOpus coûte 9,99 €/mois tout inclus, sans engagement.</p>
               </details>
               <details>
                 <summary>Y a-t-il un engagement ?</summary>
@@ -574,15 +571,15 @@ export default function HomePage() {
             <h2>Prêt à facturer comme un pro ?</h2>
             <p>
               Rejoignez les milliers d'artisans et indépendants qui font
-              confiance à XOpus. Essai gratuit de 14 jours, sans carte bancaire.
+              confiance à XOpus. Accédez à l'application et facturez en 2 min.
             </p>
             <div className="site-cta-row" style={{ justifyContent: "center" }}>
-              <AppLink
-                intent="register"
+              <Link
+                href="https://app.xopus.fr"
                 className="site-btn site-btn-primary site-btn-lg"
               >
                 Commencer gratuitement
-              </AppLink>
+              </Link>
               <Link
                 href="/contact"
                 className="site-btn site-btn-ghost site-btn-lg"
