@@ -2087,6 +2087,15 @@ button {
 }
 
 /* ── Feature group title ── */
+.site-feature-group {
+    padding: var(--section-spacing) var(--container-padding);
+    position: relative;
+}
+
+.feature-group-alt {
+    background: var(--color-bg-card);
+}
+
 .site-feature-group-title {
     font-size: 1.75rem;
     font-weight: 700;
